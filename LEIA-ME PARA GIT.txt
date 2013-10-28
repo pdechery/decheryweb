@@ -1,9 +1,0 @@
-INFORMAÇÕES ÚTEIS PARA USO DO GIT:
-
-passphrase do ssh: dechery2013
-
-senha para push: dechery2013
-
-COMANDOS:
-
-Remover aquivo do Index -> git rm --cached [file]
