@@ -1,0 +1,433 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+
+/*@azul: #caddf2;*/
+
+@azul: #9db9da;
+
+@azulfundo: #506d8f;
+
+body, html { 
+	margin: 0;
+	height: 100%;
+	background-size: cover;
+	-webkit-font-smoothing: antialiased; /* evitar que as fontes sejam automaticamente bold no Mac. */
+	font:16px/1.5em 'Open Sans', Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+a {
+	color:#fff;
+}
+
+#warning {
+	display: none;
+	padding: 4px;
+	font-size: .8em;
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+}
+
+/*
+
+	header
+
+*/
+
+header {
+	position:fixed;
+	width: 100%;
+	z-index: 3;
+	div {
+		width: 800px;
+		padding: 50px 0 0;
+		margin:0 auto;
+		color: #fff;
+		text-align: right;
+		h1 {
+			float: left;
+			margin: -10px 0 0;
+			display: inline-block;
+			font-weight: normal;
+		}
+	}
+}
+
+/*
+
+	divs animadas
+
+*/
+
+.panel {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 4;
+	padding: 1px 0; /* evitar margin-collapsing */
+	div.area {
+		position: relative;
+		padding: 0;
+		width:740px;
+		margin:0 auto;
+		top:15%;
+	}
+}
+
+/*
+
+	onde entra o texto estilo código e conteúdo em geral
+
+*/
+
+div.code {
+	color: #fff;
+	text-align: left;
+	& > div {
+		padding-left: 35px; /* estilo indentado */
+	}
+	h3 {
+		font-size: 1.3em;
+		margin: 0 0 20px;
+		padding: 0;
+	}
+	span.selector {
+		font-style: italic;
+	}
+	span.html {
+		margin: 0 0 20px;
+		padding: 0;
+	}
+}
+
+/*
+
+	div com display table
+
+*/
+
+.col-wrap {
+	display:table;
+	border-collapse:collapse;
+	width: 100%;
+	.col-body {
+		display:table-row;
+		.cell {
+			display:table-cell;
+			width: 50%;
+		}
+	}
+}
+
+/*
+
+	sections
+
+*/
+
+#main-panel {
+	div.area {
+		width:510px;
+		height:170px;
+		top:35%;
+		div.code {
+			font-size: 1.6em;
+			line-height: 1.4em;
+		}
+	}
+}
+
+#sobre {
+	#nav {
+		margin-right: -35px;
+		margin-top: 50px;
+		width: 705px;
+		.cell {
+			font-size: .9em;
+			cursor: pointer;
+			width: 25%!important;
+			text-align: center;
+			a {
+				text-decoration: none;
+			}
+			&.ativo, a:hover {
+				color:#fff;
+			}
+			h4 {
+				margin: 10px;
+			}
+		}
+	}
+	#skill, #bio {
+		display:none;
+	}
+}
+
+#sobre #skill {
+	height:240px;
+	h4 {
+		margin-top: 0;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style-type: none;
+			padding: 0;
+			span {
+				/*font-weight: 800;*/
+			}
+		}
+	}
+	div#tools {
+		padding-left: 30px;
+		border-left: 1px solid @azul;
+	}
+}
+
+#work {
+	div#portfolio {
+		padding-left: 0!important;
+		margin:12% auto 0;
+		width: 610px;
+		height: 230px;
+		overflow:hidden;
+		position:relative;
+		div.site {
+			height: 230px;
+			float: left;
+			position:relative;
+			img {
+				max-width: 100%;
+			}
+			div.info {
+				text-align: left;
+				margin: 0 auto;
+				font-size: .8em;
+				span {
+					float: right;
+				}
+			}
+		}
+	}
+	ul#slidenav {
+		width: 610px;
+		margin: 30px auto 0;
+		padding: 0;
+		text-align: center;
+		list-style: none;
+		li {
+			 float: left;
+			 margin-left: 10px;
+			 a {
+				height: 12px;
+				width: 12px;
+				display: inline-block;
+				border-radius: 12px;
+				&.active,&:hover {
+					background-color:#fff;
+				}
+			}
+		}
+	}
+	p.link {
+		text-align: right!important;
+		width: 610px;
+		margin: -30px auto 0;
+		text-align: center;
+		font-size: .8em;
+		color:#fff;
+	}
+}
+
+/*
+
+	change style
+
+*/
+
+div#switch {
+	position: fixed;
+	right: 0;
+	top:40%;
+	border: 1px solid #fff;
+	border-right: none;
+	color: #fff;
+	z-index: 400;
+	span {
+		display: block;
+		padding: 15px;
+		cursor: pointer;
+		i {
+			color: #fff;
+		}
+	}
+}
+
+/*
+
+	botão nav
+
+*/
+
+div#down {
+	position: absolute;
+	bottom:5%;
+	width:100%;
+	text-align: center;
+	z-index: 400;
+	.tooltip {
+		display: none;
+		font-family: 'Droid Sans';
+		padding: 10px;
+		color: #fff;
+		font-size: .9em;
+	}
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+/*
+
+	clearfix
+
+*/
+
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility: hidden;
+}
+
+
+.clearfix {display:inline;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+/*
+
+	media queries
+
+*/
+
+@media only screen and (max-width:820px) {
+
+	#warning {
+		display: block;
+	}
+	
+	header div {
+		width:700px;
+	}
+	
+	#sobre, #work {
+		div.area {
+			width:640px!important;
+		}
+	}
+
+	#sobre {
+		#nav {
+			width: 605px;
+		}
+	}
+
+}
+
+@media only screen and (max-width:740px) {
+	
+	#warning {
+		display: block;
+	}
+
+	header div {
+		width:640px;
+	}
+	
+	#sobre, #work {
+		div.area {
+			width:580px!important;
+		}
+	}
+
+	#sobre {
+		#nav {
+			width: 555px;
+		}
+	}
+
+}
+
+@media only screen and (max-width:680px) {
+	
+	#warning {
+		display: block;
+	}
+
+	header {
+		display:none;
+	}
+	
+	#sobre, #work {
+		div.area {
+			width: 560px!important;
+		}
+	}
+
+	#sobre {
+		#nav {
+			width: 525px;
+		}
+	}
+
+}
+
+@media only screen and (max-width:460px) {
+	
+	#warning {
+		display: block;
+	}
+	
+	header {
+		display:none;
+	}
+	
+	#sobre, #work {
+		div.area {
+			width: 360px!important;
+			top: 6%;
+			div.code > div {
+				padding-left: 0;
+			}
+		}
+	}
+
+	#sobre {
+		#nav {
+			width: 360px;
+		}
+	}
+
+	#switch {
+		display: none;
+	}
+
+	#down {
+		bottom: 3%!important;
+	}
+
+}
+
+
+

@@ -1,0 +1,490 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+
+/*@azul: #caddf2;*/
+
+@azul: #9db9da;
+
+@azulfundo: #506d8f;
+
+body, html { 
+	margin: 0;
+	height: 100%;
+	background-size: cover;
+	-webkit-font-smoothing: antialiased; /* evitar que as fontes sejam automaticamente bold no Mac. */
+	font:16px/1.5em 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+a {
+	color:#fff;
+}
+
+/*
+
+	header
+
+*/
+
+header {
+	box-sizing:border-box;
+	position: fixed;
+	z-index: 3;
+	width: 800px;
+	padding: 50px 0 0;
+	top: 0;
+	left: 50%;
+	margin-left: -400px;
+	color: #fff;
+	text-align: right;
+	h1 {
+		float: left;
+		margin: -10px 0 0;
+		display: inline-block;
+		font-weight: normal;
+	}
+	/* menu não sendo usado */
+	ul {
+		float: right;
+		list-style: none; 
+		li {	
+			display: inline-block;
+		}
+	}
+}
+
+/*
+
+	divs animadas
+
+*/
+
+.panel {
+	width: 100%;
+	height: 100%;
+	min-height: 760px;
+	margin:0;	
+	position: relative;
+	z-index: 4;
+	div.area {
+		position: absolute;
+		padding: 0;
+		width:740px;
+		height: 540px;
+		top: 15%;
+		left: 50%;
+		margin-left:-370px;
+	}
+}
+
+/*
+
+	onde entra o texto estilo código e conteúdo em geral
+
+*/
+
+div.code {
+	color: #fff;
+	text-align: left;
+	& > div {
+		padding-left: 35px; /* estilo indentado */
+	}
+	h3 {
+		font-size: 1.3em;
+		margin: 0 0 20px;
+		padding: 0;
+	}
+	span.selector {
+		font-style: italic;
+	}
+	span.html {
+		margin: 0 0 20px;
+		padding: 0;
+	}
+}
+
+/*
+
+	div com display table
+
+*/
+
+.col-wrap {
+	display:table;
+	border-collapse:collapse;
+	width: 100%;
+	.col-body {
+		display:table-row;
+		.cell {
+			display:table-cell;
+			width: 50%;
+		}
+	}
+}
+
+/*
+
+	sections
+
+*/
+
+#main-panel {
+	div.area {
+		width:510px;
+		height:170px;
+		top:50%;
+		margin-left:-255px;
+		margin-top:-120px;
+		div.code {
+			font-size: 1.6em;
+			line-height: 1.4em;
+		}
+	}
+}
+
+#sobre {
+	#nav {
+		position: absolute;
+		right: 0;
+		top:350px;
+		width: 705px;
+		.cell {
+			font-size: .9em;
+			cursor: pointer;
+			width: 25%!important;
+			text-align: center;
+			a {
+				text-decoration: none;
+			}
+			&.ativo, a:hover {
+				color:#fff;
+			}
+			h4 {
+				margin: 10px;
+			}
+		}
+	}
+}
+
+/*
+
+	slideshow
+
+*/
+
+#work {
+	div#portfolio {
+		padding-left: 0!important;
+		margin:13% auto 0;
+		width: 610px;
+		height: 230px;
+		overflow:hidden;
+		position:relative;
+		div.site {
+			width: 610px;
+			height: 230px;
+			float: left;
+			position:relative;
+			div.info {
+				text-align: left;
+				margin: 0 auto;
+				font-size: .8em;
+				span {
+					float: right;
+				}
+			}
+		}
+	}
+	ul#slidenav {
+		width: 610px;
+		margin: 30px auto 0;
+		padding: 0;
+		text-align: center;
+		list-style: none;
+		li {
+			 float: left;
+			 margin-left: 10px;
+			 a {
+				height: 12px;
+				width: 12px;
+				display: inline-block;
+				border-radius: 12px;
+				&.active,&:hover {
+					background-color:#fff;
+				}
+			}
+		}
+	}
+	p.link {
+		text-align: right!important;
+		width: 610px;
+		margin: -30px auto 0;
+		text-align: center;
+		font-size: .8em;
+		color:#fff;
+	}
+}
+
+#skill, #bio {
+	display:none;
+}
+
+#skill {
+	height:240px;
+	h4 {
+		margin-top: 0;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style-type: none;
+			padding: 0;
+			span {
+				/*font-weight: 800;*/
+			}
+		}
+	}
+	div#tools {
+		padding-left: 30px;
+		border-left: 1px solid @azul;
+	}
+}
+
+/*
+
+	change style
+
+*/
+
+div#switch {
+	position: fixed;
+	right: 0;
+	top:40%;
+	border: 1px solid #fff;
+	border-right: none;
+	color: #fff;
+	z-index: 400;
+	span {
+		display: block;
+		padding: 15px;
+		cursor: pointer;
+		i {
+			color: #fff;
+		}
+	}
+}
+
+/*
+
+	botão nav
+
+*/
+
+div#down {
+	position: absolute;
+	bottom:5%;
+	width:100%;
+	text-align: center;
+	z-index: 400;
+	.tooltip {
+		display: none;
+		font-family: 'Droid Sans';
+		padding: 10px;
+		color: #fff;
+		font-size: .9em;
+	}
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+/*
+
+	clearfix
+
+*/
+
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility: hidden;
+}
+
+
+.clearfix {display:inline;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+/*
+
+	media queries
+
+*/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+	
+	header {
+		display: none;
+	}
+	
+	#main-panel {
+		div.area {
+			width:220px;
+			height:140px;
+			top:50%;
+			left:50%;
+			margin-left:-110px;
+			margin-top:-70px;
+			div.code {
+				font-size: 1em;
+				line-height: 1.6em;
+			}
+		}
+	}
+
+	div#switch {
+		display:none!important;
+		span {
+			padding: 10px;
+			i {
+				font-size: .9em;
+			}
+		}
+	}
+
+	#sobre {
+		margin-bottom: 20px;
+		div.code > div {
+			padding-left: 0;
+		}
+		/*min-height:;*/
+		div.area {
+			width:220px;
+			height: auto;
+			top: 10%;
+			left: 50%;
+			margin-left:-110px;
+			font-size: .9em;
+			#nav {
+				display: none;
+			}
+		}
+		div#down {
+			display: none;
+		}
+	}
+
+	#work {
+		display: none;
+	}
+
+}
+
+@media only screen and (min-device-width : 719px) and (max-device-width : 721px) and (-webkit-min-device-pixel-ratio : 2) and (orientation : portrait) { 
+
+	header {
+		display: none;
+	}
+	
+	#main-panel {
+		div.area {
+			width:220px;
+			height:140px;
+			top:50%;
+			left:50%;
+			margin-left:-110px;
+			margin-top:-70px;
+			div.code {
+				font-size: 1em;
+				line-height: 1.6em;
+			}
+		}
+	}
+
+	div#switch {
+		display:none!important;
+		span {
+			padding: 10px;
+			i {
+				font-size: .9em;
+			}
+		}
+	}
+
+	#sobre {
+		margin-bottom: 20px;
+		div.code > div {
+			padding-left: 0;
+		}
+		/*min-height:;*/
+		div.area {
+			width:220px;
+			height: auto;
+			top: 10%;
+			left: 50%;
+			margin-left:-110px;
+			font-size: .9em;
+			#nav {
+				display: none;
+			}
+		}
+		div#down {
+			display: none;
+		}
+	}
+
+	#work {
+		display: none;
+	}
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
