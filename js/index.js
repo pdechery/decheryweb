@@ -16,18 +16,8 @@ $(function() {
 		var hash = '#' + this.id;
 
 		$('a[href="' + hash + '"]').click(function(e) {
-
-			$('#skills').hide();
-
-			if(this.hash == '#skills') {
-				$('#skills').toggle();
-			}
-
-			// panels verticais
 			e.preventDefault();
 			$('html, body').animate({scrollTop: $panel.offset().top}, 600, 'swing')
-
-
 		});
 
 	});
@@ -44,26 +34,36 @@ $(function() {
 	});
 
 	// troca conteúdo
-	var $nav = $('#nav div.cell');
-	$nav.click(function(e){
-		e.preventDefault();
-		var id; var $this;
-		$this = $(this);
-		id = $this.attr('data-target');
+	var $nav = $('#nav .cell a').add('#bio a');
+	
+	$nav.click(function(e) {
+		
+		var id = $(this).attr('data-target');
+
+		console.log(id);
+
+		if (id == "bio" || id == "skill") {
+			e.preventDefault();
+		};
+		
 		$nav.removeClass('ativo');
 		$('#bio,#skill').hide();
 		$('#'+id).toggle();
-		$this.addClass('ativo');
+		$nav.filter(function(){ return $(this).attr('data-target') == id }).addClass('ativo');
+	
 	}).hover(function(){
-		var id; var $this;
-		$this = $(this);
-		id = $this.attr('data-target');
+		
+		var id = $(this).attr('data-target');
+		
 		if($('#'+id).css('display') != 'block') {
-			$this.toggleClass('ativo');
+			$(this).toggleClass('ativo');
 		}
+	
 	});
-	$nav.eq(0).trigger('click');
+	
+	$nav.filter(function(){ return $(this).attr('data-target') == "bio" }).trigger('click');
 
+	// tremida na setinha
 	jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
 		this.each(function() {
 			$(this).css("position","relative"); 

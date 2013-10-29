@@ -1,8 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
-
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
-
-/*@azul: #caddf2;*/
 
 @azul: #9db9da;
 
@@ -22,7 +18,10 @@ div {
 }
 
 a {
-	color:#fff;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 /*
@@ -36,8 +35,7 @@ header {
 	width: 100%;
 	z-index: 3;
 	div {
-		width: 100%;
-		max-width: 800px;
+		width: 800px;
 		padding: 50px 0 0;
 		margin:0 auto;
 		color: #fff;
@@ -67,8 +65,8 @@ header {
 		position: relative;
 		padding: 0;
 		width: 740px;
-		margin:0 auto;
-		top:15%;
+		margin: 0 auto;
+		top: 15%;
 	}
 }
 
@@ -86,7 +84,7 @@ div.code {
 	}
 	h3 {
 		font-size: 1.3em;
-		margin: 0 0 20px;
+		margin: 0 0 30px;
 		padding: 0;
 	}
 	span.selector {
@@ -131,9 +129,9 @@ div.code {
 		display: block;
 	}
 	div.area {
-		width:510px;
-		height:170px;
-		top:35%;
+		width: 510px;
+		height: 170px;
+		top: 35%;
 		div.code {
 			font-size: 1.6em;
 			line-height: 1.4em;
@@ -158,17 +156,21 @@ div.code {
 				display: inline-block;
 				text-decoration: none;
 				font-weight: 700;
-			}
-			&.ativo, a:hover {
-				color:#fff;
+				&.ativo {
+					color:#fff;
+				}
+				&:hover {
+					color:#fff;
+				}
 			}
 		}
 	}
-	#nav-mobile {
+	#nav-mobile { /* a fazer... */
 		display: none;
 	}
 	#skill, #bio {
 		display:none;
+		min-height: 260px;
 	}
 
 	#work {
@@ -176,39 +178,40 @@ div.code {
 	}
 }
 
-#sobre #skill {
-	height:240px;
+#sobre #skill {  /* tabela skills */
 	h4 {
 		margin-top: 0;
 		font-weight: 700;
 		text-transform: uppercase;
+		font-size: .9em;
 	}
 	ul {
 		margin: 0;
 		padding: 0;
 		li {
 			list-style-type: none;
-			padding: 0;
-			span {
-				/*font-weight: 800;*/
-			}
+			padding: 0 0 5px;
 		}
 	}
 	div#tools {
 		padding-left: 30px;
-		border-left: 1px solid @azul;
+		li {
+			font-size: .9em;
+			padding: 0 0 0;
+		}
 	}
 }
 
 #work {
 	div#portfolio {
 		padding-left: 0!important;
-		margin:12% auto 0;
+		margin: 12% auto 0;
 		width: 610px;
 		height: 230px;
-		overflow:hidden;
-		position:relative;
+		overflow: hidden;
+		position: relative;
 		div.site {
+			width: 610px;
 			height: 230px;
 			float: left;
 			position:relative;
@@ -239,13 +242,13 @@ div.code {
 				width: 12px;
 				display: inline-block;
 				border-radius: 12px;
-				&.active,&:hover {
+				&.active, &:hover {
 					background-color:#fff;
 				}
 			}
 		}
 	}
-	p.link {
+	p.maistrabs {
 		text-align: right!important;
 		width: 610px;
 		margin: -30px auto 0;
@@ -264,17 +267,17 @@ div.code {
 div#switch {
 	position: fixed;
 	right: 0;
-	top:40%;
-	border: 1px solid #fff;
+	top: 40%;
 	border-right: none;
-	color: #fff;
 	z-index: 400;
 	span {
 		display: block;
-		padding: 15px;
+		padding: 10px 20px 0 0;
 		cursor: pointer;
 		i {
-			color: #fff;
+			&:hover {
+				color:#fff;
+			}
 		}
 	}
 }
@@ -287,14 +290,13 @@ div#switch {
 
 div#down {
 	position: absolute;
-	bottom:5%;
-	width:100%;
+	bottom: 5%;
+	width: 100%;
 	text-align: center;
 	z-index: 400;
 	.tooltip {
 		display: none;
-		font-family: 'Droid Sans';
-		padding: 10px;
+		padding: 0;
 		color: #fff;
 		font-size: .9em;
 	}

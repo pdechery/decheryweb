@@ -1,5 +1,6 @@
 *.exe
 *.rar
+*.txt
 .DS_Store
 .DS_Store?
 ._*

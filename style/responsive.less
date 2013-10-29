@@ -12,13 +12,13 @@
 
 @media only screen and (max-width : 840px) {
 	#switch {
-		display: none;
+		/*display: none;*/
 	}
 }
 
 /* 
 
-	a partir de 520px de altura para baixo some a seta 'down' (menos na pagina inicial).
+	a partir de 520px de altura para baixo some a seta 'down' (menos na landing page).
 
 */
 
@@ -33,13 +33,14 @@
 /* 
 
 	a partir de 780px de largura pra baixo a largura das divs passa a ser relativa.
+	e o header também.
  
 */
 
 @media only screen and (max-width : 780px) {
 
 	header div {
-		width:auto;
+		width: auto;
 		padding: 50px 1.2em 0;
 	}
 	
@@ -48,7 +49,8 @@
 		height:auto;
 		div.area {
 			width:auto;
-			padding:0 1em;
+			height: auto;
+			padding:0 3.5em 0 2em;
 			margin-top: 25%; /* top não funciona mais com width:auto, pelo menos no FF */
 		}
 	}

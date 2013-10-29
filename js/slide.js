@@ -12,7 +12,6 @@ $(function(){
 
 	function moveSlide() {
 		$('#slidesHolder').animate({'marginLeft' : slideWidth*(-currentPosition)});
-		//console.log(currentPosition);
 	}
 
 	function setActive(number, el) {
@@ -20,12 +19,6 @@ $(function(){
 		$(".active", el).removeClass("active");
 		$("li:eq(" + current + ") a", el).addClass("active");
 	}
-
-	// se houvesse botões de next / previous
-	// $('#slidenav span').click(function() {	
-	// 	currentPosition = ($(this).attr('id')=='right') ? currentPosition + 1 : currentPosition -1 ;
-	// 	moveSlide();
-	// });
 
 	//pagination
 	pagination = $("<ul>", {"id": "slidenav", "class": "clearfix"}).appendTo($container);
@@ -40,7 +33,7 @@ $(function(){
 			href: "#",
 			"item": i,
 			"class": i == 0 ? 'active' : ''
-		}).appendTo(paginationItem);;
+		}).appendTo(paginationItem);
 	
 		return paginationLink.click(function(e) {
 			var currPos;
