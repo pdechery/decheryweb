@@ -45,7 +45,8 @@ $(function() {
 
 	// troca conteúdo
 	var $nav = $('#nav div.cell');
-	$nav.click(function(){
+	$nav.click(function(e){
+		e.preventDefault();
 		var id; var $this;
 		$this = $(this);
 		id = $this.attr('data-target');
