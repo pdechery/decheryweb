@@ -5,9 +5,14 @@
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 	<title>Dechery Web</title>
 	<link rel="stylesheet" href="style/decheryweb.css">
-	<link id="style" rel="stylesheet" href="style/blue.css">
+	<link id="style" rel="stylesheet" href="style/orange.css">
 	<link rel="stylesheet" href="style/font-awesome.min.css">
 </head>
+<script>
+	$(document).ready(function(){
+		$('#twitter-widget-0').contents().find('.stream').css('color','#fff');
+	});
+</script>
 <body>
 	
 	<script type="text/javascript">
@@ -32,15 +37,15 @@
 	</header>
 
 	<div id="switch">
-		<span class="blue"><i class="icon-moon"></i></span>
-		<span class="orange"><i class="icon-sun"></i></span>
+		<span class="blue"><i class="fa fa-moon-o"></i></span>
+		<span class="orange"><i class="fa fa-sun-o"></i></span>
 	</div>
 	
 	<section id="main-panel" class="panel">
 
-		<div id="down">
+		<div class="down">
 			<div class="tooltip">[ apresentação ]</div>
-			<a href="#sobre"><i class="icon-angle-down icon-2x"></i></a>
+			<a href="#sobre"><i class="fa fa-angle-down fa-lg"></i></a>
 		</div>
 
 		<div class="area">
@@ -68,25 +73,23 @@
 	<section id="sobre" class="panel">
 
 		<div id="nav-mobile" class="col-wrap">
-			<div class="col-body">
-				<div class="cell">
-					<a href="#" data-target="bio"><span>bio&nbsp;&nbsp;</span><i class="icon-book"></i></a>
-				</div>
-				<div class="cell">
-					<a href="#" data-target="skill"><span>skills&nbsp;&nbsp;</span><i class="icon-code"></i></a>
-				</div>
-				<div class="cell">
-					<span><a href="mailto:pierre@decheryweb.com.br" target="_blank">contato&nbsp;&nbsp;</span><i class="icon-envelope"></i></a>
-				</div>
-				<div class="cell">
-					<span><a href="http://br.linkedin.com/in/pierredz" target="_blank">cv&nbsp;&nbsp;</span><i class="icon-linkedin-sign"></i></a>
-				</div>
+			<div class="cell">
+				<a href="#" data-target="bio"><span>bio&nbsp;&nbsp;</span><i class="fa fa-book"></i></a>
+			</div>
+			<div class="cell">
+				<a href="#" data-target="skill"><span>skills&nbsp;&nbsp;</span><i class="fa fa-code"></i></a>
+			</div>
+			<div class="cell">
+				<a href="#" data-target="contato"><span>contato&nbsp;&nbsp;</span><i class="fa fa-envelope"></i></a>
+			</div>
+			<div class="cell">
+				<a href="http://br.linkedin.com/in/pierredz" target="_blank" data-target="cv"><span>cv&nbsp;&nbsp;</span><i class="fa fa-linkedin-sign"></i></a>
 			</div>
 		</div>
 
-		<div id="down">
+		<div class="down">
 			<div class="tooltip">[ portfolio ]</div>
-			<a href="#work"><i class="icon-angle-down icon-2x"></i></a>
+			<a href="#main-panel"><i class="fa fa-angle-up fa-lg"></i></a>
 		</div>
 		
 		<div class="area">
@@ -96,100 +99,117 @@
 				
 				<div>
 
-					<div id="bio">
-						<p>Sou um designer e desenvolvedor web carioca. Trabalho na web desde 2.000, me dedicando a criação e ao desenvolvimento com linguagens front-end e também server side.</p>
+					<div id="bio" class="eu">
+						<p>Sou um designer e desenvolvedor web carioca. Trabalho na web desde 2.000, me dedicando à criação e ao desenvolvimento com linguagens front-end e também server side.</p>
 						<p><a href="#" data-target="skill">Neste link</a> você pode ver as linguagens e ferramentas que utilizo.</p>
-						<p>Para ver meus projetos mais recentes, você pode ir no meu <a href="#work">portfolio</a>, logo aqui embaixo.</p>
-						<p>Caso necessite de meus serviços, será um prazer <a href="#" data-target="talk">conversar com você</a>.</p>
-						<p>Muito obrigado pela sua visita.</p>
+						<p class="mobile-hide">Para ver alguns de meus projetos, visite meu <a href="http://www.decheryweb.com.br/portfolio" target="_blank">portfolio.</a></p>
+						<p>Caso necessite de meus serviços, será um prazer <a href="#" data-target="contato">conversar com você</a>.</p>
+						<p>Obrigado pela visita!</p>
 					</div>
 
-					<div id="skill">
+					<div id="skill" class="eu">
 						<div class="col-wrap">
 							<div class="col-body">
 								<div class="cell">
-									<h4>coding skills&nbsp;&nbsp;<i class="icon-code"></i></h4>
-									<ul>
+									<h4>coding skills&nbsp;&nbsp;<i class="fa fa-code"></i></h4>
+									<ul class="nobull">
 										<li>HTML &nbsp;&nbsp;&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i></li>
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i></li>
 										<li>CSS&nbsp;&nbsp;&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>
-										</li>
-										<li>Wordpress / Joomla&nbsp;&nbsp;&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star-empty"></i>
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>
 										</li>
 										<li>Javascript&nbsp;&nbsp;&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star-empty"></i>&nbsp;
-											<i class="icon-star-empty"></i>
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star-o"></i>
 										</li>
 										<li>jQuery&nbsp;&nbsp;&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star-empty"></i>&nbsp;
-											<i class="icon-star-empty"></i>
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star-o"></i>
 										</li>
 										<li>PHP&nbsp;&nbsp;&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star-half-empty"></i>&nbsp;
-											<i class="icon-star-empty"></i>&nbsp;
-											<i class="icon-star-empty"></i>
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star-o"></i>&nbsp;
+											<i class="fa fa-star-o"></i>
 										</li>
 										<li>MySQL&nbsp;&nbsp;&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star"></i>&nbsp;
-											<i class="icon-star-half-empty"></i>&nbsp;
-											<i class="icon-star-empty"></i>&nbsp;
-											<i class="icon-star-empty"></i>
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
+											<i class="fa fa-star-o"></i>&nbsp;
+											<i class="fa fa-star-o"></i>
 										</li>
 									</ul>
 								</div>
 								<div id="tools" class="cell">
-									<h4>ferramentas preferidas&nbsp;&nbsp;<i class="icon-wrench"></i></h4>
-									<ul>
+									<h4>ferramentas preferidas&nbsp;&nbsp;<i class="fa fa-wrench"></i></h4>
+									<ul class="nobull">
 										<li>Sublime Text</li>
 										<li>LESS</li>
-										<li>Wordpress</li>
+										<li>Wordpress / Joomla</li>
 										<li>Bootstrap</li>
-										<li>Git</li>
+										<li><a href="https://github.com/pdechery" target="_blank" title="visite meu perfil no github">Git</a></li>
 										<li>Font Awesome</li>
-										<li>Grunt</li>
+										<li>Suite Adobe</li>
 										<li>etc...</li>
 									</ul>
 								</div>
 							</div>
 						</div>
+						<!--p class="back-to-bio"><a href="#" data-target="bio"><i class="fa fa-angle-left"></i>&nbsp;&nbsp; voltar</a></p-->
+					</div>
+
+					<div id="contato" class="eu">
+						<h4>entre em contato:</h4>
+						<ul class="nobull">
+							<li><i class="fa fa-envelope"></i>&nbsp;&nbsp;<a href="mailto:pierre@decheryweb.com.br">pierre@decheryweb.com.br</a></li>
+							<li><i class="fa fa-mobile-phone"></i>&nbsp;&nbsp;021 99134 3344</a></li>
+							<li><i class="fa fa-skype"></i>&nbsp;&nbsp;decheryweb</li>
+							<!--li><i class="fa fa-twitter"></i><a href="https://twitter.com/decheryweb" target="_blank">&nbsp;&nbsp;decheryweb</a></li-->
+						</ul>
+						
+					</div>
+
+					<div id="cv" class="eu">
+						<h4>Breve currículo:</h4>
+						<ul>
+							<li>Me formei em Desenho Industrial (habilitação Comunicação Visual) na PUC-Rio em 2000</li>
+							<li>Passei pelas seguintes empresas: <a href="http://www.telelistas.net/" target="_blank">Telelistas</a>, Octopop (antigo Gazzag) e <a href="http://softbrazil.com.br/agenciaweb/" target="_blank">Softbrazil</a></li>
+							<li>Atualmente sou Webmaster na <a href="http://rioaliancafrancesa.com.br/" target="_blank">Aliança Francesa do Rio de Janeiro</a></li>
+							<li>Também sou músico e ocasionalmente <a href="http://rateyourmusic.com/~pierremusico" target="_blank">escrevo sobre o assunto</a></li>
+							<li>Para mais infos <a href="http://br.linkedin.com/in/pierredz" target="_blank">visite meu perfil no Linkedin</a></li>
+						</ul>
+						<!--p class="back-to-bio"><a href="#" data-target="bio"><i class="fa fa-angle-left"></i>&nbsp;&nbsp; voltar</a></p-->
 					</div>
 
 					<div id="nav" class="col-wrap">
 						<div class="col-body">
 							<div class="cell">
-								<a href="#" data-target="bio"><span>bio&nbsp;&nbsp;</span><i class="icon-book"></i></a>
+								<a href="#" data-target="bio"><span>bio&nbsp;&nbsp;</span><i class="fa fa-book"></i></a>
 							</div>
 							<div class="cell">
-								<a href="#" data-target="skill"><span>skills&nbsp;&nbsp;</span><i class="icon-code"></i></a>
+								<a href="#" data-target="skill"><span>skills&nbsp;&nbsp;</span><i class="fa fa-code"></i></a>
 							</div>
 							<div class="cell">
-								<a href="mailto:pierre@decheryweb.com.br" target="_blank"><span>contato&nbsp;&nbsp;</span><i class="icon-envelope"></i></a>
+								<a href="#" data-target="contato"><span>contato&nbsp;&nbsp;</span><i class="fa fa-comment"></i></a>
 							</div>
 							<div class="cell">
-								<a href="http://br.linkedin.com/in/pierredz" target="_blank"><span>cv&nbsp;&nbsp;</span><i class="icon-linkedin-sign"></i></a>
+								<a href="#" data-target="cv"><span>cv&nbsp;&nbsp;</span><i class="fa fa-file-text"></i></a>
 							</div>
 						</div>
 					</div>
@@ -202,11 +222,11 @@
 
 	</section>
 
-	<section id="work" class="panel">
+	<!--section id="work" class="panel">
 
-		<div id="down">
-			<div class="tooltip">[ back to the start ]</div>
-			<a href="#main-panel"><i class="icon-angle-up icon-2x"></i></a>
+		<div class="down">
+			<div class="tooltip">[ back to top ]</div>
+			<a href="#main-panel"><i class="fa fa-angle-up fa-lg"></i></a>
 		</div>
 		
 		<div class="area">
@@ -216,44 +236,117 @@
 				<h3>#portfolio</h3>
 				
 				<div id="portfolio">
+
+					<div class="thumb">
+						<div class="caption">
+							<p>
+								<a href="#afrio">Aliança Francesa</a>
+							</p>
+						</div>
+						<img src="img/sites/afrio_thumb.jpg">
+					</div>
 					
-					<div class="site">
-						<img src="img/sites/afrio.jpg" alt="Aliança Francesa do Rio de Janeiro">
-						<div class="info">
-							<span>Joomla/PHP/MySQL</span>
-							Aliança Francesa do Rio de Janeiro
+					<div class="thumb">
+						<div class="caption">
+							<p>
+								<a href="#tvpia">TV Piá</a>
+							</p>
 						</div>
+						<img src="img/sites/tvpia_thumb.jpg">
 					</div>
 
-					<div class="site">
-						<img src="img/sites/britschool.jpg" alt="Brittish School">
-						<div class="info">
-							<span>Wordpress/PHP/MySQL</span>
-							Brittish School
+					<div class="thumb">
+						<div class="caption">
+							<p>
+								<a href="#britschool">Brittish School<br><span>(em construção)</span></a>
+							</p>
 						</div>
-					</div>
-
-					<div class="site">
-						<img src="img/sites/tvpia.jpg" alt="TV Piá">
-						<div class="info">
-							<span>Joomla/PHP/MySQL</span>
-							Tv Piá
-						</div>
+						<img src="img/sites/bschool_thumb.jpg">
 					</div>
 				
 				</div>
 
 			</div>
 
-			<p class="maistrabs">para ver mais trabalhos <a href="http://decheryweb.com.br/portfolio" target="_blank">clique aqui</a></p>
-
 		</div>
 		
-	</section>
+	</section-->
+
+	<!--section id="afrio" class="site panel">
+
+		<div class="down">
+			<div class="tooltip">[ back to top ]</div>
+			<a href="#work"><i class="fa fa-angle-up fa-lg"></i></a>
+		</div>
+		
+		<div class="area">
+
+			<div class="proj_container">
+
+				<div class="proj">
+					<div class="info">
+						<div class="txt">
+							A Aliança Francesa possui 9 filiais no Rio de Janeiro e é uma referência tradicional na cidade para a cultura francesa. 
+							<p>O novo site, lançado em setembro de 2012, buscou modernizar a imagem da rede e facilitar a busca por informações dos cursos, além de oferecer sistemas para visualização e cadastro de notas, exclusivo para uso dos alunos e professores.</p>
+						</div>
+					</div>
+					<img src="img/sites/afrio_full1.jpg">
+					<img src="img/sites/afrio_full2.jpg">
+					<div class="label">
+						<span><a href="javascript:void(0);">info</a></span>
+						Aliança Francesa Rio de Janeiro
+					</div>
+				</div>
+
+			</div>
+		
+		</div>
+	
+	</section-->
+
+	<!--section id="tvpia" class="site panel">
+
+		<div class="down">
+			<div class="tooltip">[ back to top ]</div>
+			<a href="#work"><i class="fa fa-angle-up fa-lg"></i></a>
+		</div>
+		
+		<div class="area">
+
+			<div class="proj_container">
+
+				<div class="proj">
+					<div class="info">
+						<div class="txt">
+							TV Piá é um programa infantil que é exibido no TV Brasil. A idéia do programa é fazer das crianças repórteres de uma série de quadros com temas diversos, como receitas, piadas, cultura etc.
+							Trabalhei com o CMS Joomla, utilizando um plugin próprio para administração de vídeos.
+						</div>
+					</div>
+					<img src="img/sites/tvpia_full1.jpg">
+					<div class="label">
+						<span><a href="javascript:void(0);">info</a></span>
+						TV Piá
+					</div>
+				</div>
+
+			</div>
+		
+		</div>
+	
+	</section-->
 
 	<script src="js/jquery.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/slide.js"></script>
+    <script src="js/jquery.decheryslide.js"></script>
+
+    <script>
+  		$('#afrio').decherySlide({
+  			navigation:true,
+  			auto:false,
+  			slideEl:'.proj img',
+			navEl:'.area'
+  		});
+	</script>
 
 </body>
 </html>
