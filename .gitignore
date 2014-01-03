@@ -10,6 +10,7 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
+LEIA-ME PARA GIT.txt
 eu.rtf
 package.json
 gruntfile.js
@@ -21,3 +22,5 @@ node_modules/
 fontes/
 img/
 psd/
+style/download
+js/slidejs

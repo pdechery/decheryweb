@@ -45,17 +45,21 @@ div.code {
 
 #sobre {
 	#nav .cell {
+		border-top: 1px solid @amarelo;
 		color: @amarelo;
 		a {
-			color: @amarelo;
+			color: #fff3bb;
 		}
 	}
 }
 
 #work {
-	ul#slidenav {
-		li a {
-			background-color:@amarelo;
+	div#portfolio {
+		div.thumb {
+			background-color: #571400;
+			div.caption {
+				background-color: #571400;
+			}
 		}
 	}
 	p.link {
@@ -83,11 +87,12 @@ div#switch {
 
 */
 
-div#down {
+div.down {
 	.tooltip {
 		color: @amarelo;
 	}
-	a:hover {
+	a {
 		color: @amarelo;
+		border:2px solid @amarelo;
 	}
 }
