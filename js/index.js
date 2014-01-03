@@ -1,6 +1,23 @@
-$(function() {
+$(function($) {
 
-	// animação divs
+	// controle show/hide da área do site quando volta para inicio
+	$('a[href="#main-panel"]').click(function() {
+		$('.site').hide();
+	});
+
+	// links nos thumbs abrem respectivo projeto
+	$('.thumb').hover(function() {
+		$(this).find('.caption').toggle();
+	});
+
+	// navegação trabalhos
+	$('.caption a').click(function(){
+		var site = $(this).attr('href');
+		$('.site').hide();
+		$('section'+site).show();
+	});
+
+	// one page navigatin
 	_window = $(window);
 
 	var $panels = $('.panel');
@@ -17,7 +34,7 @@ $(function() {
 
 		$('a[href="' + hash + '"]').click(function(e) {
 			e.preventDefault();
-			$('html, body').animate({scrollTop: $panel.offset().top}, 600, 'swing')
+			$('html, body').animate({scrollTop: $panel.offset().top}, 600, 'swing');
 		});
 
 	});
@@ -28,43 +45,32 @@ $(function() {
 		$('#style').attr('href', 'style/'+choice+'.css');
 	});
 
-	// botão subir
-	$('#down a').hover(function() {
-		$('#down .tooltip').toggle();
-	});
+	// tooltip no botão da navegação
+	// $('#down a').hover(function() {
+	// 	$('#down .tooltip').toggle();
+	// });
 
-	// troca conteúdo
-	var $nav = $('#nav .cell a').add('#bio a');
-	
-	$nav.click(function(e) {
-		
-		var id = $(this).attr('data-target');
+	// troca conteúdo na seção #eu
+	$.fn.showDivs = function(el) {
+		var $nav = $('#nav .cell a');
+		this.click(function(e){
+			var id = $(this).attr('data-target') || 0; // link do portfolio não tem mais o atributo.
+			if(id != 0) {
+				e.preventDefault();
+				$nav.removeClass('ativo');
+				$('.eu').hide();
+				$('#'+id).toggle();
+				$nav.filter(function(){return $(this).attr('data-target') == id}).addClass('ativo');
+			}
+		});
+		$nav.eq(el).trigger('click');
+	}
 
-		console.log(id);
+	$('#nav .cell a, #bio a, .back-to-bio a').showDivs(0);
 
-		if (id == "bio" || id == "skill") {
-			e.preventDefault();
-		};
-		
-		$nav.removeClass('ativo');
-		$('#bio,#skill').hide();
-		$('#'+id).toggle();
-		$nav.filter(function(){ return $(this).attr('data-target') == id }).addClass('ativo');
-	
-	}).hover(function(){
-		
-		var id = $(this).attr('data-target');
-		
-		if($('#'+id).css('display') != 'block') {
-			$(this).toggleClass('ativo');
-		}
-	
-	});
-	
-	$nav.filter(function(){ return $(this).attr('data-target') == "bio" }).trigger('click');
 
 	// tremida na setinha
-	jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
+	$.fn.shake = function(intShakes, intDistance, intDuration) {
 		this.each(function() {
 			$(this).css("position","relative"); 
 			for (var x=1; x<=intShakes; x++) {
@@ -74,10 +80,15 @@ $(function() {
 			}
 		});
 		return this;
-	};
+	}
 
-	$("#down a").hover(function(){
-		$("#down a").shake(1,7,500);
+	$(".down a").hover(function(){
+		$("i", $(this)).shake(2,3,500);
 	});
 
-});
+	// show/hide info projetos
+	$('.label a').click(function() {
+		$('.proj .info').toggle();
+	});
+
+ })(jQuery);
