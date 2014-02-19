@@ -1,4 +1,4 @@
-$(function($) {
+(function($) {
 
 	// controle show/hide da área do site quando volta para inicio
 	$('a[href="#main-panel"]').click(function() {
@@ -7,11 +7,14 @@ $(function($) {
 
 	// links nos thumbs abrem respectivo projeto
 	$('.thumb').hover(function() {
-		$(this).find('.caption').toggle();
+		$('.caption', this).toggle();
+	}).click(function(){
+		var link = $('a', this).attr('href');
+		console.log(link);
 	});
 
 	// navegação trabalhos
-	$('.caption a').click(function(){
+	$('#portfolio p a').click(function(){
 		var site = $(this).attr('href');
 		$('.site').hide();
 		$('section'+site).show();
@@ -22,7 +25,7 @@ $(function($) {
 
 	var $panels = $('.panel');
 
-	$panels.css({
+	$panels.not($('#work')).css({
 		minHeight:_window.height(),
 		width:_window.width()
 	})

@@ -1,8 +1,8 @@
 (function($) {
 
-	$.fn.decherySlide = function(options){
+	$.fn.decherySlide = function(defaults){
 
-		var config = $.extend({
+		var options = {
 			slideWidth: 440,
 			slideHeight: 510,
 			currentPosition: 0,
@@ -12,98 +12,108 @@
 			speed: 500,
 			prevIcon: '<i class="fa fa-angle-left fa-lg"></i>',
 			nextIcon: '<i class="fa fa-angle-right fa-lg"></i>',
-		}, options||{});
+		};
 
-		// elemento passado na chamada do plugin
-		config.container = this;
+		var config = $.extend(options, defaults);
 
-		// slides
-		config.slides$ = $(config.slideEl, config.container);
-		config.slides$.total = config.slides$.length;
-		config.slides$.steps = config.slides$.length - 1;
+		this.each(function(){
 
-		// wrapper
-		config.slides$.wrapAll('<div class="slidesHolder"></div>'); // html wrapper dos slides
-		config.wrapper$ = $('.slidesHolder'); 
-		config.wrapper$.css('width', config.slideWidth * config.slides$.total);
-
-		function moveSlide(dir) {
-			console.log(dir);
-			var ponteiro = config.currentPosition;
-			switch(dir) {
-				case "next":
-					config.currentPosition = (ponteiro >= config.slides$.steps) ? config.slides$.steps : ponteiro + 1;
-					break; 
-				case "prev":
-					config.currentPosition = (ponteiro <= 0) ? 0 : ponteiro - 1;
-					break; 
-				default:
-					break; 
-			};
-			config.wrapper$.animate({'marginLeft' : config.slideWidth*(-config.currentPosition)});
-			setActive(config.currentPosition); 	// atualiza bullet da paginação
-		}
-
-		function setActive(number) {
-			var current = number > -1 ? number : 0;
-			$(".active", $pagination).removeClass("active");
-			$("li:eq(" + current + ") a", $pagination).addClass("active");
-		}
-
-		//navigation
-		if(config.navigation) {
-
-			config.navWrapper$ = $('<div class="navigation"></div>').prependTo($(config.navEl, config.container)); // html wrapper da navegação  
-
-			var html = ' <a class="prevImg">'+ config.prevIcon +'</a>';
-			html += ' <a class="nextImg">'+ config.nextIcon +'</a>';
+			var $obj = $(this);
 			
-			config.navWrapper$.prepend(html);
+			var $slideEl = $('.proj img', $obj);
+			var $navEl = $('.area', $obj);
 
-			$('a.prevImg').click(function() {		
-				moveSlide('prev');
-			});
-			$('a.nextImg').click(function() {		
-				moveSlide('next');				
-			})
+			var total = $slideEl.length;
+			var steps = $slideEl.length - 1;
+			
+			// wrapper
+			$slideEl.wrapAll('<div class="slidesHolder"></div>'); // html wrapper dos slides
+			
+			var $wrapper = $('.slidesHolder', $obj); 
+			
+			$wrapper.css('width', config.slideWidth * total);
 
-		}
-
-		if(config.auto) {
-			var roda = function() {
-				moveSlide('next');
+			function moveSlide(dir) {
+				console.log(dir);
+				var ponteiro = config.currentPosition;
+				switch(dir) {
+					case "next":
+						config.currentPosition = (ponteiro >= steps) ? steps : ponteiro + 1;
+						break; 
+					case "prev":
+						config.currentPosition = (ponteiro <= 0) ? 0 : ponteiro - 1;
+						break; 
+					default:
+						break; 
+				};
+				$wrapper.animate({'marginLeft' : config.slideWidth*(-config.currentPosition)});
+				setActive(config.currentPosition); 	// atualiza bullet da paginação
 			}
-			setInterval(roda, 2600);
-		}
 
-		//pagination
-		if(config.pagination) {
+			function setActive(number) {
+				var current = number > -1 ? number : 0;
+				$(".active", $pagination).removeClass("active");
+				$("li:eq(" + current + ") a", $pagination).addClass("active");
+			}
 
-			var $pagination = $("<ul>", {"id": "slidenav", "class": "clearfix"}).prependTo(config.container);
-			
-			$.each(new Array(config.slides$.total), function(i) {
+			//navigation
+			if(config.navigation) {
 
-				var paginationItem, paginationLink;
+				if(config.navigation) {
+					$navWrap = $('<div class="navigation"></div>').prependTo($($navEl, $obj)); // html wrapper da navegação  
+				}
+
+				var html = ' <a class="prevImg">'+ config.prevIcon +'</a>';
+				html += ' <a class="nextImg">'+ config.nextIcon +'</a>';
 				
-				paginationItem = $("<li>").appendTo($pagination);
-				
-				paginationLink = $("<a>", {
-					href: "#",
-					"item": i,
-					"class": i == 0 ? 'active' : ''
-				}).appendTo(paginationItem);
-			
-				return paginationLink.click(function(e) {
-					var currPos;
-					e.preventDefault();
-					currPos = $(e.currentTarget).attr("item");
-					config.currentPosition = parseInt(currPos); // altera o currentPosition, e transforma currPos em número inteiro
-					moveSlide(currPos);
+				$navWrap.prepend(html);
+
+				$('a.prevImg').click(function() {		
+					moveSlide('prev');
 				});
-			
-			})
+				$('a.nextImg').click(function() {		
+					moveSlide('next');				
+				})
 
-		}
+			}
+
+			if(config.auto) {
+				var roda = function() {
+					moveSlide('next');
+				}
+				setInterval(roda, 2600);
+			}
+
+			//pagination
+			if(config.pagination) {
+
+				var $pagination = $("<ul>", {"id": "slidenav", "class": "clearfix"}).prependTo(this);
+				
+				$.each(new Array(total), function(i) {
+
+					var paginationItem, paginationLink;
+					
+					paginationItem = $("<li>").appendTo($pagination);
+					
+					paginationLink = $("<a>", {
+						href: "#",
+						"item": i,
+						"class": i == 0 ? 'active' : ''
+					}).appendTo(paginationItem);
+				
+					return paginationLink.click(function(e) {
+						var currPos;
+						e.preventDefault();
+						currPos = $(e.currentTarget).attr("item");
+						config.currentPosition = parseInt(currPos); // altera o currentPosition, e transforma currPos em número inteiro
+						moveSlide(currPos);
+					});
+				
+				})
+
+			}
+		
+		});
 
 	};
 

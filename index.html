@@ -5,14 +5,9 @@
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 	<title>Dechery Web</title>
 	<link rel="stylesheet" href="style/decheryweb.css">
-	<link id="style" rel="stylesheet" href="style/orange.css">
+	<link id="style" rel="stylesheet" href="style/orange.css?version=2">
 	<link rel="stylesheet" href="style/font-awesome.min.css">
 </head>
-<script>
-	$(document).ready(function(){
-		$('#twitter-widget-0').contents().find('.stream').css('color','#fff');
-	});
-</script>
 <body>
 	
 	<script type="text/javascript">
@@ -52,7 +47,7 @@
 
 			<div id="mobile" class="code">
 				<span class="html">&#35;dechery&nbsp;&nbsp;&#123;</span>
-				<div>designer e desenvolvedor web;</div>
+				<div>desenvolvedor web;</div>
 				<span class="html">&#125;</span>
 			</div>
 
@@ -60,8 +55,8 @@
 				<span class="html">&#35;dechery&nbsp;&nbsp;&#123;</span>
 				<div>
 					<span class="selector">quem:</span> pierre dechery;<br>
-					<span class="selector">o quê:</span> designer e desenvolvedor web;<br>
-					<span class="selector">faz:</span> design e código;
+					<span class="selector">o quê:</span> desenvolvedor web;<br>
+					<span class="selector">faz:</span> muito código;
 				</div>
 				<span class="html">&#125;</span>
 			</div>
@@ -89,7 +84,7 @@
 
 		<div class="down">
 			<div class="tooltip">[ portfolio ]</div>
-			<a href="#main-panel"><i class="fa fa-angle-up fa-lg"></i></a>
+			<a href="#work"><i class="fa fa-angle-down fa-lg"></i></a>
 		</div>
 		
 		<div class="area">
@@ -100,9 +95,10 @@
 				<div>
 
 					<div id="bio" class="eu">
-						<p>Sou um designer e desenvolvedor web carioca. Trabalho na web desde 2.000, me dedicando à criação e ao desenvolvimento com linguagens front-end e também server side.</p>
-						<p><a href="#" data-target="skill">Neste link</a> você pode ver as linguagens e ferramentas que utilizo.</p>
-						<p class="mobile-hide">Para ver alguns de meus projetos, visite meu <a href="http://www.decheryweb.com.br/portfolio" target="_blank">portfolio.</a></p>
+						<p>Sou um desenvolvedor web carioca, na ativa desde 2.000.</p>
+						<p>Tenho formação em Design pela PUC-Rio mas desde a primeira vez que conheci HTML e CSS passei a me dedicar cada vez mais ao mundo das letrinhas coloridas.</p>
+						<p>Para exemplos do que faço, recomendo ver meu perfil no <a href="https://github.com/pdechery" target="_blank">Github</a>.</p>
+						<p>Para ver alguns dos Sites que fiz, é só clicar <a href="#work">aqui</a>.</p>
 						<p>Caso necessite de meus serviços, será um prazer <a href="#" data-target="contato">conversar com você</a>.</p>
 						<p>Obrigado pela visita!</p>
 					</div>
@@ -144,14 +140,14 @@
 											<i class="fa fa-star"></i>&nbsp;
 											<i class="fa fa-star"></i>&nbsp;
 											<i class="fa fa-star"></i>&nbsp;
-											<i class="fa fa-star-o"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
 											<i class="fa fa-star-o"></i>
 										</li>
 										<li>MySQL&nbsp;&nbsp;&nbsp;
 											<i class="fa fa-star"></i>&nbsp;
 											<i class="fa fa-star"></i>&nbsp;
 											<i class="fa fa-star"></i>&nbsp;
-											<i class="fa fa-star-o"></i>&nbsp;
+											<i class="fa fa-star"></i>&nbsp;
 											<i class="fa fa-star-o"></i>
 										</li>
 									</ul>
@@ -162,16 +158,15 @@
 										<li>Sublime Text</li>
 										<li>LESS</li>
 										<li>Wordpress / Joomla</li>
-										<li>Bootstrap</li>
-										<li><a href="https://github.com/pdechery" target="_blank" title="visite meu perfil no github">Git</a></li>
 										<li>Font Awesome</li>
+										<li>Bootstrap</li>
+										<li>Git</li>
 										<li>Suite Adobe</li>
 										<li>etc...</li>
 									</ul>
 								</div>
 							</div>
 						</div>
-						<!--p class="back-to-bio"><a href="#" data-target="bio"><i class="fa fa-angle-left"></i>&nbsp;&nbsp; voltar</a></p-->
 					</div>
 
 					<div id="contato" class="eu">
@@ -180,7 +175,6 @@
 							<li><i class="fa fa-envelope"></i>&nbsp;&nbsp;<a href="mailto:pierre@decheryweb.com.br">pierre@decheryweb.com.br</a></li>
 							<li><i class="fa fa-mobile-phone"></i>&nbsp;&nbsp;021 99134 3344</a></li>
 							<li><i class="fa fa-skype"></i>&nbsp;&nbsp;decheryweb</li>
-							<!--li><i class="fa fa-twitter"></i><a href="https://twitter.com/decheryweb" target="_blank">&nbsp;&nbsp;decheryweb</a></li-->
 						</ul>
 						
 					</div>
@@ -194,7 +188,6 @@
 							<li>Também sou músico e ocasionalmente <a href="http://rateyourmusic.com/~pierremusico" target="_blank">escrevo sobre o assunto</a></li>
 							<li>Para mais infos <a href="http://br.linkedin.com/in/pierredz" target="_blank">visite meu perfil no Linkedin</a></li>
 						</ul>
-						<!--p class="back-to-bio"><a href="#" data-target="bio"><i class="fa fa-angle-left"></i>&nbsp;&nbsp; voltar</a></p-->
 					</div>
 
 					<div id="nav" class="col-wrap">
@@ -222,7 +215,7 @@
 
 	</section>
 
-	<!--section id="work" class="panel">
+	<section id="work" class="panel">
 
 		<div class="down">
 			<div class="tooltip">[ back to top ]</div>
@@ -235,44 +228,49 @@
 				
 				<h3>#portfolio</h3>
 				
-				<div id="portfolio">
-
-					<div class="thumb">
-						<div class="caption">
-							<p>
-								<a href="#afrio">Aliança Francesa</a>
-							</p>
-						</div>
-						<img src="img/sites/afrio_thumb.jpg">
-					</div>
+				<div id="portfolio" class="clearfix">
 					
-					<div class="thumb">
+					<div class="thumb first">
 						<div class="caption">
-							<p>
-								<a href="#tvpia">TV Piá</a>
-							</p>
+							<a href="#arena"></a>
 						</div>
-						<img src="img/sites/tvpia_thumb.jpg">
+						<img src="img/sites/arena_thumb.png">
+						<p>
+							<a href="#arena">Arena Carioca</a>
+						</p>
 					</div>
 
 					<div class="thumb">
 						<div class="caption">
-							<p>
-								<a href="#britschool">Brittish School<br><span>(em construção)</span></a>
-							</p>
+							<a href="#britschool"></a>
 						</div>
 						<img src="img/sites/bschool_thumb.jpg">
+						<p>
+							<a href="#britschool">Brittish School</a>
+						</p>
+					</div>
+
+					<div class="thumb">
+						<div class="caption">
+							<a href="#afrio"></a>
+						</div>
+						<img src="img/sites/afrio_thumb.jpg">
+						<p>
+							<a href="#afrio">Aliança Francesa</a>
+						</p>
 					</div>
 				
 				</div>
 
+				<p style="text-align:right;font-size:.9em;"><a href="http://www.decheryweb.com.br/portfolio/" target="_blank"><i class="fa fa-plus"></i>&nbsp;&nbsp;trabalhos?</a></p>
+
 			</div>
 
 		</div>
 		
-	</section-->
+	</section>
 
-	<!--section id="afrio" class="site panel">
+	<section id="afrio" class="site panel">
 
 		<div class="down">
 			<div class="tooltip">[ back to top ]</div>
@@ -284,17 +282,14 @@
 			<div class="proj_container">
 
 				<div class="proj">
-					<div class="info">
-						<div class="txt">
-							A Aliança Francesa possui 9 filiais no Rio de Janeiro e é uma referência tradicional na cidade para a cultura francesa. 
-							<p>O novo site, lançado em setembro de 2012, buscou modernizar a imagem da rede e facilitar a busca por informações dos cursos, além de oferecer sistemas para visualização e cadastro de notas, exclusivo para uso dos alunos e professores.</p>
-						</div>
-					</div>
 					<img src="img/sites/afrio_full1.jpg">
 					<img src="img/sites/afrio_full2.jpg">
-					<div class="label">
-						<span><a href="javascript:void(0);">info</a></span>
-						Aliança Francesa Rio de Janeiro
+					<img src="img/sites/afrio_full3.jpg">
+					<div class="info">
+						Joomla, PHP/MySQL, Design
+						<span>
+							<a href="http://www.rioaliancafrancesa.com.br" target="_blank">visitar site&nbsp;&nbsp;<i class="fa fa-external-link"></i></a>
+						</span>
 					</div>
 				</div>
 
@@ -302,9 +297,9 @@
 		
 		</div>
 	
-	</section-->
+	</section>
 
-	<!--section id="tvpia" class="site panel">
+	<section id="britschool" class="site panel">
 
 		<div class="down">
 			<div class="tooltip">[ back to top ]</div>
@@ -316,16 +311,11 @@
 			<div class="proj_container">
 
 				<div class="proj">
+					<div class="ribbon"></div>
+					<img src="img/sites/britschooll_full.png">
+					<img src="img/sites/britschooll_full2.png">
 					<div class="info">
-						<div class="txt">
-							TV Piá é um programa infantil que é exibido no TV Brasil. A idéia do programa é fazer das crianças repórteres de uma série de quadros com temas diversos, como receitas, piadas, cultura etc.
-							Trabalhei com o CMS Joomla, utilizando um plugin próprio para administração de vídeos.
-						</div>
-					</div>
-					<img src="img/sites/tvpia_full1.jpg">
-					<div class="label">
-						<span><a href="javascript:void(0);">info</a></span>
-						TV Piá
+						Wordpress, PHP/MySQL
 					</div>
 				</div>
 
@@ -333,19 +323,45 @@
 		
 		</div>
 	
-	</section-->
+	</section>
+
+	<section id="arena" class="site panel">
+
+		<div class="down">
+			<div class="tooltip">[ back to top ]</div>
+			<a href="#work"><i class="fa fa-angle-up fa-lg"></i></a>
+		</div>
+		
+		<div class="area">
+
+			<div class="proj_container">
+
+				<div class="proj">
+					<div class="ribbon"></div>
+					<img src="img/sites/arena_gd.png">
+					<img src="img/sites/arena2_gd.png">
+					<div class="info">
+						Wordpress, PHP/MySQL
+					</div>
+				</div>
+
+			</div>
+		
+		</div>
+	
+	</section>
 
 	<script src="js/jquery.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/jquery.decheryslide.js"></script>
+    <script src="js/index.js?version=2"></script>
+    <script src="js/jquery.decheryslide.js?version=2"></script>
 
     <script>
-  		$('#afrio').decherySlide({
-  			navigation:true,
-  			auto:false,
-  			slideEl:'.proj img',
-			navEl:'.area'
-  		});
+    	$(document).ready(function(){
+    		$('#afrio, #arena, #britschool').decherySlide({
+	  			navigation:true,
+	  			auto:false,
+	  		});
+    	});
 	</script>
 
 </body>
