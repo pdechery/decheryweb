@@ -1,8 +1,49 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300|Montserrat:400,700);
 
-@azul: #9db9da;
+/*
 
-@azulfundo: #506d8f;
+	variáveis
+
+*/
+
+
+@azul:#9db9da;
+
+@azulfundo:#22456a;
+
+@azulblusa: #193859;
+
+@orange:#cc6600;
+
+@amarelo:#e8b64c;
+
+@amarelo:#ffffcc;
+
+
+/*
+
+	botão
+
+*/
+
+.btn(@color,@bgcolor) {
+	font-size: 1.2em;
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px;
+	width: 24px;
+	height: 24px;
+	border-radius: 24px;
+	color:@color;
+	background-color:@bgcolor;
+	&:hover {
+		color:@bgcolor;
+		background-color: @color;
+	}
+	i {
+		line-height:.8em;
+	}
+}
 
 .header_uppercase {
 	text-transform: uppercase;
@@ -14,9 +55,11 @@
 body, html { 
 	margin: 0;
 	height: 100%;
+	/*background: url("../img/me.jpg") no-repeat 50% 50% fixed;*/
 	background-size: cover;
 	-webkit-font-smoothing: antialiased; /* evitar que as fontes sejam automaticamente bold no Mac. */
-	font:16px/1.5em 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
 	text-align: center;
 }
 
@@ -33,6 +76,23 @@ a {
 	}
 }
 
+/* 
+
+	botão subir
+
+*/
+
+div.down {
+	position: absolute;
+	bottom: 4%;
+	width: 100%;
+	text-align: center;
+	z-index: 400;
+	a {
+		.btn(#fff,@azulfundo);
+	}
+}
+
 /*
 
 	divs animadas
@@ -46,6 +106,8 @@ a {
 	z-index: 4;
 	padding: 1px 0; /* evitar margin-collapsing */
 	div.area {
+		text-align: left;
+		color:#fff;
 		position: relative;
 		padding: 0;
 		width: 740px;
@@ -54,75 +116,15 @@ a {
 	}
 }
 
-/*
-
-	onde entra o texto estilo código e conteúdo em geral
-
-*/
-
-div.code {
-	color: #fff;
-	text-align: left;
-	& > div {
-		padding-left: 35px; /* estilo indentado */
-	}
-	h3 {
-		font-size: 1.3em;
-		margin: 0 0 30px;
-		padding: 0;
-		font-weight: 700;
-	}
-	span.selector {
-		font-style: italic;
-	}
-	span.html {
-		margin: 0 0 20px;
-		padding: 0;
-	}
-}
-
-/*
-
-	botão nav
-
-*/
-
-div.down {
-	position: absolute;
-	bottom: 4%;
-	width: 100%;
-	text-align: center;
-	z-index: 400;
-	.tooltip {
-		display: none;
-		padding: 0;
-		color: #fff;
-		font-size: .8em;
-		margin-bottom: 10px;
-	}
+div.btn {
 	a {
-		display: inline-block;
-		text-decoration: none;
-		padding: 5px;
-		width: 18px;
-		height: 18px;
-		border-radius: 18px;
-		line-height: 17px;
-		border:2px solid @azul;
-		color:@azul;
-		&:hover {
-			color:#fff!important;
-			border-color: #fff;
-		}
-		i {
-			line-height:.5em;
-		}
+		.btn(#fff, @azulfundo);
 	}
 }
 
 /*
 
-	div com display table
+	div display table
 
 */
 
@@ -145,35 +147,94 @@ div.down {
 
 */
 
-#main-panel {
+#cover {
+	background: url("../img/bg_orange.png") no-repeat 50% 50% fixed;
 	#mobile {
 		display: none;
 	}
-	#full {
-		display: block;
-	}
 	div.area {
+		text-align: center;
 		width: 380px;
 		height: 170px;
 		top: 35%;
-		div.code {
-			font-size: 1.6em;
-			line-height: 1.4em;
+		header {
+			h1 {
+				font-family: 'Montserrat';
+				font-size: 1.8em;
+				font-weight: 700;
+				text-transform: uppercase;
+				margin: 0 0 15px;
+			}
+			h2 {
+				font-family: 'Merriweather';
+				font-size: 1.3em;
+				font-weight: 300;
+				margin: 0 0 30px;
+				color: #000;
+			}
 		}
 	}
 }
 
-#sobre {
-	h4 {
-		margin-top: 0;
-		font-weight: 700;
-		text-transform: uppercase;
-		font-size: .9em;
+#main {
+	background: url("../img/bg_blue.png") no-repeat 50% 50% fixed;
+	nav {
+		display: none;
+		position: absolute;
+		top:200px;
+		top: 5%;
+		right: 2%;
+		ul {
+			margin: 0;
+			padding: 0;
+			border-left: 1px solid @azul;
+			li {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				font-family: 'Montserrat';
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: .7em;
+				cursor: pointer;
+				text-align: left;
+				a {
+					margin: 0;
+					padding:0 20px;
+					display: inline-block;
+					text-decoration: none;
+					color: @azul;
+					&.ativo {
+						color: #fff;
+					}
+					&:hover {
+						color:#fff;
+					}
+				}
+			}
+		}
 	}
-	.eu {
+	h4 {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		margin-top: 0;
+		text-transform: uppercase;
+		font-size: 1.3em;
+	}
+	.eu { /* wrapper */
 		display:none;
-		min-height: 280px;
+		min-height: 400px;
 		position: relative;
+		font-family: 'Merriweather';
+		font-size: 1.1em;
+		font-weight: 300;
+		line-height: 1.7em;
+		p:first-child {
+			margin-top: 0;
+		}
+		a {
+			color: @azul;
+		}
 		.back-to-bio {
 			position: absolute;
 			bottom: 0;
@@ -194,108 +255,149 @@ div.down {
 		}
 	}
 	#nav {
-		margin-right: -35px;
-		margin-top: 20px;
-		width: 100%;
-		max-width: 705px;
-		.cell {
-			font-size: .9em;
-			cursor: pointer;
-			width: 25%!important;
-			text-align: center;
-			a {
-				margin: 10px;
-				display: inline-block;
-				text-decoration: none;
-				font-weight: 700;
-				&.ativo {
-					color:#fff;
-				}
-				&:hover {
-					color:#fff;
-				}
-			}
+		display: none;
+	}
+	a#icon {
+		display: none;
+		position: absolute;
+		top:0;
+		right:4%;
+		width: 30px;
+		height: 30px;
+		color: #fff;
+		border: 1px solid @azul;
+		border-top: 0;
+		text-align: center;
+		line-height: 2em;
+		z-index: 30;
+		&:hover {
+			background-color: @azul;
+			color: @azulfundo;
 		}
 	}
 	#nav-mobile { /* a fazer... */
 		display: none;
-	}
-}
-
-#sobre #skill {  /* tabela skills */
-	div#tools {
-		padding-left: 30px;
-		li {
-			font-size: .9em;
-			padding: 0 0 0;
+		position: absolute;
+		top:30px;
+		left:0;
+		z-index: 40;
+		ul {
+			width: 100%;
+			border:0;
+			border-top: 1px solid @azul;
+			li a {
+				text-align: center;
+				display: block;
+				width: auto;
+				border-bottom: 1px solid @azul;
+				background-color: @azulfundo;
+				padding: 2% 0;
+			}
 		}
 	}
-}
-
-#sobre #cv {
-	li {
-		margin-bottom: 10px;
+	#bio {
+		h4 {
+			font-size: 1.3em;
+		}
 	}
-}
-
-#work {
-	div#portfolio {
-		width: 705px;
-		margin: 75px 0 50px 35px;
-		padding-left: 0!important;
-		div.thumb {
-			width: 215px;
-			position:relative;
-			margin-left: 30px;
-			float: left;
-			div.caption {
-				width: 215px;
-				height: 135px;
-				position: absolute;
-				top: 0;
-				left: 0;
-				display: none;
-				background-color: #01244c;
-				opacity: .60;
+	#skill {  /* tabela skills */
+		.cell {
+			border: 1px solid #fff;
+			padding-left: 30px;
+		}
+		ul li i {
+			color: @azul;
+		}
+		h3 {
+			font-size: .8em;
+			font-family: 'Montserrat';
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		div#tools {
+			li {
+				font-size: .9em;
+				padding: 0 0 0;
 			}
-			p {
-				text-transform: uppercase;
-				font-size: .7em;
-				line-height: 1.4em;
-				margin:0;
-				a {
-					&:hover {
-						color: #fff;
+		}
+		.obs {
+			margin-top: 20px;
+			font-size: .8em;
+		}
+	}
+	#cv {
+		li {
+			margin-bottom: 20px;
+			/*font-size: .9em;*/
+		}
+	}
+	#work {
+		div#portfolio {
+			width: 705px;
+			margin: 75px 0 50px 35px;
+			padding-left: 0!important;
+			div.thumb {
+				width: 215px;
+				position:relative;
+				margin-left: 30px;
+				float: left;
+				div.caption  {
+					width: 215px;
+					height: 135px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					display: none;
+					background-color: #01244c;
+					opacity: .60;
+					cursor:pointer;
+					text-align: center;
+					a {
+						display: block;
+						width: 100%;
+						height: 100%;
+						color:@azul;
 						text-decoration: none;
+						font-family: 'Montserrat';
+						font-weight: 400;
+						font-size: .9em;
+						line-height: 1.4em;
+						text-transform: uppercase;
+						padding-top: 20%;
+					}
+				}
+				p {
+					font-family: 'Montserrat';
+					font-weight: 400;
+					text-transform: uppercase;
+					font-size: .6em;
+					line-height: 1.4em;
+					margin:0;
+					a {
+						&:hover {
+							color: #fff;
+							text-decoration: none;
+						}
 					}
 				}
 			}
+			.first {
+				margin-left: 0!important;
+			}
 		}
-		.first {
-			margin-left: 0!important;
+		p#proj-infos {
+			margin-left: 35px;
+			font-size: .8em;
+			line-height: 1.4em;
+			span {
+				float: right;
+			}
 		}
 	}
 }
-
-#blog {
-	width: 100%;
-	height: auto;
-	div.code {
-		color:#000;
-	}
-	div.down a {
-		color: orange;
-		border: 2px solid #ffc;
-	}
-}
-
-/*
-	
-	SITES PORTFOLIO
-
-*/
 
 .site {
+	background-color: @azulblusa;
 	display: none;
 	div.proj_container {
 		width: 440px;
@@ -374,7 +476,6 @@ div.navigation {
 	}
 }
 
-/* navegação slideshow com bullets */
 ul#slidenav { 
 	width: 440px;
 	margin: 20px auto 0;
@@ -391,30 +492,6 @@ ul#slidenav {
 			border-radius: 12px;
 			&.active, &:hover {
 				background-color:#fff;
-			}
-		}
-	}
-}
-
-/*
-
-	change style
-
-*/
-
-div#switch {
-	position: fixed;
-	right: 0;
-	top: 40%;
-	border-right: none;
-	z-index: 400;
-	span {
-		display: block;
-		padding: 10px 20px 0 0;
-		cursor: pointer;
-		i {
-			&:hover {
-				color:#fff;
 			}
 		}
 	}

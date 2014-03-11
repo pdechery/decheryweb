@@ -1,6 +1,7 @@
 *.exe
 *.rar
 *.txt
+*.css
 .DS_Store
 .DS_Store?
 ._*
@@ -16,6 +17,7 @@ package.json
 gruntfile.js
 decheryweb.sublime-project
 decheryweb.sublime-workspace
+.gitignore
 
 referencias/
 node_modules/
@@ -23,4 +25,4 @@ fontes/
 img/
 psd/
 style/download
-js/slidejs
+download/

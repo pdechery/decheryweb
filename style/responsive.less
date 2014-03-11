@@ -4,185 +4,46 @@
 
 */
 
-/* 
+@media only screen and (max-width : 320px)  and (max-width : 480px) {
 
-	a partir de 840px de largura para baixo some o controle switch (troca de css).
-	obs: desisti disso. no tablet tá ficando legal.
 
-*/
-
-@media only screen and (max-width : 840px) {
-	#switch {
-		/*display: none;*/
-	}
-}
-
-/* 
-
-	a partir de 520px de altura para baixo some a seta 'down' (menos na landing page).
-
-*/
-
-@media only screen and (max-height : 520px) {
-	#sobre, #work {
-		#down {
-			display: none;
-		}
-	}
-}
-
-/* 
-
-	a partir de 780px de largura pra baixo a largura das divs passa a ser relativa.
-	e o header também.
- 
-*/
-
-@media only screen and (max-width : 780px) {
-
-	header div {
-		width: auto;
-		padding: 50px 1.2em 0;
-	}
-	
-	#sobre, #work {
+	#cover, #main {
 		width:auto!important;  /* panels 100% atrapalha o layout responsivo */
 		height:auto;
 		div.area {
 			width:auto;
 			height: auto;
-			padding:0 3.5em 0 2em;
-			margin-top: 25%; /* top não funciona mais com width:auto, pelo menos no FF */
 		}
 	}
 
-}
-
-/* 
-
-	a partir de 610px de largura para baixo o header desaparece.
-	e o slideshow fica com largura relativa.
-
-*/
-
-@media only screen and (max-width : 610px) {
-	header {
-		display: none;
-	}
-	#sobre, #work {
+	#cover {
 		div.area {
-			margin-top: 10%; /* já que não tem mais header, conteúdo sobe */
+			margin-top: 50%; 
 		}
 	}
-}
 
-/* 
-
-	a partir de 560px de largura para baixo somem os rótulos da navegação e ficam apenas os ícones.
-
-*/
-
-@media only screen and (max-width : 560px) {
-	#nav {
-		.cell {
-			span {
-				display: none;
-			}
-		}
-	}
-}
-
-/* 
-
-	Galaxy III
-	a partir de 360px de largura para baixo ...
-
-*/
-
-@media only screen and (max-width : 360px) {
-	#switch {
-		display: none;
-	}
-	#main-panel {
-		div.area {
-			width: 340px;
-			height: auto;
-			
-			padding:0 1.4em;
-		}
-		#mobile {
-			display: block;
-		}
-		#full {
+	#main {
+		#nav, #nav-mobile {
 			display: none;
 		}
-	}
-	#sobre, #work {
 		div.area {
-			padding:0 1.5em;
-			div.code > div {
-				padding-left: 0;
-			}
+			padding: 7%;
+			font-size: .9em;
 		}
-		#down {
-			display: none;
-		}
-	}
-	#sobre {
-		padding-bottom: 30px;
-		.eu {
-			min-height: auto;
-		}
-		#bio {
-			.mobile-hide {
-				display: none;
-			}
-		}
-		#skill {
-			div#tools {
-				margin-top: 30px;
-				padding-left: 0;
-				border-left: none;
-				li {
-					font-size: 1em;
-				}
-			}
+		div#skill {
 			.col-wrap {
 				display:block;
-				width: auto;
+				width: 100%;
 				.col-body {
 					display:block;
 					.cell {
 						display:block;
 						width: auto;
+						border: none;
 					}
 				}
 			}
 		}
-		#nav {
-			display: none;
-		}
 	}
-	#work {
-		display: none;
-	}
-}
 
-
-/*
-
-	iPhone 4, a menor das larguras relevantes
-
-*/
-
-@media only screen and (max-width : 320px) {
-	#main-panel {
-		div.area {
-			width: 280px;
-			padding: 0 .5em 0 2em;
-			div.code {
-				font-size: 1.4em;
-			}
-		}
-	}
 }
