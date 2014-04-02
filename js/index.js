@@ -1,5 +1,6 @@
 (function($) {
 
+	// troca conteúdo na seção #eu
 	$.fn.showDivs = function(el) {
 		var $nav = $('nav ul li a')
 		this.click(function(e){
@@ -17,37 +18,34 @@
 
 	$(document).ready(function(){
 
-		// nav works
+		// efeito thumbnails works
 		$('.thumb').hover(function() {
-			$('.caption', this).toggle();
-		});
-
-		$('#portfolio p a, .thumb .caption a').click(function(){
-			var site = $(this).attr('href');
-			$('.site').hide();
-			$('section'+site).show();
-		});
-
-		// one page navigation
-		_window = $(window)
-
-		var $panels = $('.panel')
-
-		$panels.css({
-			minHeight:_window.height(),
-			width:_window.width()
+			//$('.caption', this).toggle()
 		})
 
-		$panels.each(function() {
+		// control lightbox
+		$('#portfolio p a, .thumb .caption a').click(function(e){
+			e.preventDefault()
+			var site = $(this).attr('href')
+			$('.lightbox').hide()
+			$('section'+site).fadeIn()
+		})
 
-			var $panel = $(this);
-			var hash = '#' + this.id;
+		$('.lightbox .close a').click(function(e){
+			e.preventDefault()
+			$('.lightbox').hide()
+		})
 
-			$('a[href="' + hash + '"]').click(function(e) {
-				e.preventDefault();
-				$('html, body').animate({scrollTop: $panel.offset().top}, 600, 'swing');
+		// scroll
+		var $btns = $('.btn')
+
+		$btns.each(function() {
+			var $target = $('a', this).attr('href')
+			var $panel = $('section'+$target)
+			$('a',this).click(function(e) {
+				e.preventDefault()
+				$('html, body').animate({scrollTop: $panel.offset().top}, 600, 'swing')
 			})
-
 		})
 
 		var platform = navigator.userAgent.toLowerCase()
