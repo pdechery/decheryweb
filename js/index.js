@@ -18,13 +18,8 @@
 
 	$(document).ready(function(){
 
-		// efeito thumbnails works
-		$('.thumb').hover(function() {
-			//$('.caption', this).toggle()
-		})
-
 		// control lightbox
-		$('#portfolio p a, .thumb .caption a').click(function(e){
+		$('#portfolio p a').click(function(e){
 			e.preventDefault()
 			var site = $(this).attr('href')
 			$('.lightbox').hide()
@@ -57,16 +52,28 @@
 
 		$(window).scroll(function() {
 			if($(window).scrollTop() === $('#main').offset().top) {
-				$(nav).fadeIn()
+				$(nav).fadeIn().css('display','block')
 			} else {
-				$(nav).fadeOut()
+				if (!mobile) $(nav).fadeOut()
 			}
+			if($(window).scrollTop() === $('#cover').offset().top) {
+				$('.eu').hide()
+				$('#bio').toggle()
+				$('nav ul li a').removeClass('ativo').filter('[data-target="bio"]').addClass('ativo')
+			} 
 		})
 
 		if(mobile) {
-			$('a#icon').click(function(e){
+			var iconmenu = document.querySelector('a#icon')
+			var main = document.querySelector('#main')
+			main.addEventListener('click', function(e){
 				e.preventDefault()
-				$('#nav-mobile').toggle()
+				if (e.target === iconmenu) {
+					$('html, body').animate({scrollTop: $('#main').offset().top}, 200, 'swing')
+					$('#nav-mobile').show()
+				} else {
+					$('#nav-mobile').toggle()
+				}
 			})
 		}
 

@@ -1,57 +1,31 @@
-@media only screen and (max-width : 840px) {
-	
-}
+/*
 
-@media only screen and (max-height : 520px) {
-	
-}
-
-@media only screen and (max-width : 780px) {
-
-
-}
-
-@media only screen and (max-width : 610px) {
-
-	
-
-}
-
-@media only screen and (max-width : 560px) {
-
-	
-
-}
-
-/* 
-
-	Galaxy III
-	a partir de 360px de largura para baixo ...
+	MEDIA QUERIES
 
 */
 
-@media only screen and (max-width : 360px) {
-	
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+	body {
+		background-color: #193859;
+	}
+
 	#cover, #main {
-		width:auto!important;  /* panels 100% atrapalha o layout responsivo */
-		height:auto;
 		div.area {
-			width:auto;
+			width: auto!important;
 			height: auto;
 		}
 	}
 
-	#cover {
-		div.area {
-			margin-top: 50%; 
-		}
-	}
-
 	#main {
+		div.btn {
+			display: none;
+		}
 		#nav, #nav-mobile {
 			display: none;
 		}
 		div.area {
+			top: 5%;
 			padding: 7%;
 			font-size: .9em;
 		}
@@ -70,15 +44,5 @@
 			}
 		}
 	}
-}
-
-
-/*
-
-	iPhone 4, a menor das larguras relevantes
-
-*/
-
-@media only screen and (max-width : 320px) {
 
 }

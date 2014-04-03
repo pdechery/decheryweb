@@ -55,7 +55,6 @@
 body, html { 
 	margin: 0;
 	height: 100%;
-	/*background: url("../img/me.jpg") no-repeat 50% 50% fixed;*/
 	background-size: cover;
 	-webkit-font-smoothing: antialiased; /* evitar que as fontes sejam automaticamente bold no Mac. */
 	font-size: 16px;
@@ -245,8 +244,8 @@ div.btn {
 		position: absolute;
 		top:0;
 		right:4%;
-		width: 30px;
-		height: 30px;
+		width: 34px;
+		height: 34px;
 		color: #fff;
 		border: 1px solid @azul;
 		border-top: 0;
@@ -262,7 +261,7 @@ div.btn {
 		display: none;
 		position: absolute;
 		width: 100%;
-		top:30px;
+		top:34px;
 		left:0;
 		z-index: 40;
 		ul {
@@ -274,7 +273,8 @@ div.btn {
 				width: auto;
 				border-bottom: 1px solid @azul;
 				background-color: @azulfundo;
-				padding: 2% 0;
+				padding: 5% 0;
+				font-size: 1.2em;
 			}
 		}
 	}
@@ -304,14 +304,12 @@ div.btn {
 			}
 		}
 		.obs {
-			/*margin-top: 20px;*/
 			font-size: .7em;
 		}
 	}
 	#cv {
 		li {
 			margin-bottom: 20px;
-			/*font-size: .9em;*/
 		}
 	}
 }
@@ -321,11 +319,10 @@ div.btn {
 		font-weight: 400;
 		margin-top: 0;
 		font-size: .8em;
-		/*font-family: 'Montserrat';
-		color:@azul;
-		text-transform: uppercase;*/
 		margin-left: 35px;
 		margin-bottom: 0;
+		font-family: 'Montserrat';
+		text-transform: uppercase;
 	}
 	div#portfolio {
 		width: 705px;
@@ -345,20 +342,6 @@ div.btn {
 				display: none;
 				background:url('../img/bg_thumbnail.png') repeat;
 				cursor:pointer;
-				text-align: center;
-				a {
-					display: block;
-					width: 100%;
-					height: 100%;
-					color:@azul;
-					text-decoration: none;
-					font-family: 'Montserrat';
-					font-weight: 400;
-					font-size: .8em;
-					line-height: 1.4em;
-					text-transform: uppercase;
-					padding-top: 22%;
-				}
 			}
 			p {
 				font-family: 'Montserrat';
@@ -379,13 +362,21 @@ div.btn {
 			margin-left: 0!important;
 		}
 	}
-	p {
+	p#older {
+		display: none;
+		clear: both;
+		margin-top: 20px;
+		/*font-family: 'Montserrat';*/
+		/*text-transform: uppercase;*/
+		font-weight: 300;
+		font-size: .7em;
+		line-height: 1.4em;
+		text-align: right;
+	}
+	h3 + p {
 		margin-left: 35px;
 		font-size: .8em;
-		line-height: 1.4em;
-		span {
-			float: right;
-		}
+		font-weight: 300;
 	}
 }
 
@@ -423,22 +414,22 @@ div.proj_container {
 		float: left;
 		position: relative;
 		div.info {
-			display: none;
-			background-color: #000;
+			background-color: @azulblusa;
 			opacity: .9;
 			position: absolute;
-			bottom:30px;
+			bottom: 30px;
 			left: 0;
 			width: 440px;
-			height: 50px;
+			height: 40px;
 			div.txt {
 				position: absolute;
 				width: 440px;
-				text-align: left;
-				padding: 20px 30px 0 20px;
-				color: #000;
-				font-size: .9em;
-				line-height: 1.8em;
+				padding: 10px 0 0 20px;
+				font-family: 'Montserrat';
+				text-transform: uppercase;
+				font-weight: 400;
+				font-size: .8em;
+				line-height: 1.6em;
 			}
 		}
 		div.label {
@@ -447,12 +438,11 @@ div.proj_container {
 			z-index: 3;
 			text-align: left;
 			margin: 0 auto;
-			font-size: .8em;
 			font-family: 'Montserrat';
+			text-transform: uppercase;
 			font-weight: 400;
-			font-size: .8em;
-			line-height: 1.4em;
-			/*text-transform: uppercase;*/
+			font-size: .7em;
+			line-height: 1.8em;
 			a {
 				color: @azul;
 				&:hover {
@@ -535,5 +525,3 @@ ul#slidenav {
 .clearfix {display:inline;}
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
-
- @import 'responsive.less';
