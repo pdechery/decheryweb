@@ -18,8 +18,14 @@
 
 	$(document).ready(function(){
 
+		// nav works
+		// efeito thumbnails works
+		$('.thumb').hover(function() {
+			$('.caption', this).toggle();
+		});
+
 		// control lightbox
-		$('#portfolio p a').click(function(e){
+		$('#portfolio .caption a').click(function(e){
 			e.preventDefault()
 			var site = $(this).attr('href')
 			$('.lightbox').hide()
