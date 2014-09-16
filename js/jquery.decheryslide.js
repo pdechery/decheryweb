@@ -14,14 +14,14 @@
 			nextIcon: '<i class="fa fa-angle-right fa-lg"></i>',
 		};
 
-		var config = $.extend(options, defaults);
+		var config = $.extend(options, defaults||{});
 
 		this.each(function(){
 
-			var $obj = $(this);
+			var obj = this;
 			
-			var $slideEl = $('.proj img', $obj);
-			var $navEl = $('.area', $obj);
+			var $slideEl = $('.proj img', obj);
+			var $navEl = $('.area', obj);
 
 			var total = $slideEl.length;
 			var steps = $slideEl.length - 1;
@@ -29,12 +29,11 @@
 			// wrapper
 			$slideEl.wrapAll('<div class="slidesHolder"></div>'); // html wrapper dos slides
 			
-			var $wrapper = $('.slidesHolder', $obj); 
+			var $wrapper = $('.slidesHolder', obj); 
 			
 			$wrapper.css('width', config.slideWidth * total);
 
 			function moveSlide(dir) {
-				console.log(dir);
 				var ponteiro = config.currentPosition;
 				switch(dir) {
 					case "next":
@@ -51,16 +50,31 @@
 			}
 
 			function setActive(number) {
-				var current = number > -1 ? number : 0;
-				$(".active", $pagination).removeClass("active");
-				$("li:eq(" + current + ") a", $pagination).addClass("active");
+				console.log('number: '+number+' steps: '+steps+' currpos: '+config.currentPosition);
+				if(config.pagination) {
+					var current = number > -1 ? number : 0;
+					$(".active", $pagination).removeClass("active");
+					$("li:eq(" + current + ") a", $pagination).addClass("active");
+				}
+
+				if(number === steps) {
+					$('a.nextImg',obj).addClass('off');
+					$('a.prevImg',obj).removeClass('off');
+				} else if(number < steps && number !== 0) {
+					$('a.nextImg',obj).removeClass('off');
+					$('a.prevImg',obj).removeClass('off');
+				} else if(number === 0) {
+					$('a.nextImg',obj).removeClass('off');
+					$('a.prevImg',obj).addClass('off');
+				}
+
 			}
 
 			//navigation
 			if(config.navigation) {
 
 				if(config.navigation) {
-					$navWrap = $('<div class="navigation"></div>').prependTo($($navEl, $obj)); // html wrapper da navegação  
+					$navWrap = $('<div class="navigation"></div>').prependTo($($navEl, obj)); // html wrapper da navegação  
 				}
 
 				var html = ' <a class="prevImg">'+ config.prevIcon +'</a>';
@@ -68,11 +82,11 @@
 				
 				$navWrap.prepend(html);
 
-				$('a.prevImg').click(function() {		
+				$('a.prevImg', obj).click(function() {		
 					moveSlide('prev');
 				});
-				$('a.nextImg').click(function() {		
-					moveSlide('next');				
+				$('a.nextImg', obj).click(function() {		
+					moveSlide('next');		
 				})
 
 			}

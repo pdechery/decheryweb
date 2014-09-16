@@ -15,8 +15,8 @@ LEIA-ME PARA GIT.txt
 eu.rtf
 package.json
 gruntfile.js
-decheryweb.sublime-project
-decheryweb.sublime-workspace
+*sublime-project
+*.sublime-workspace
 .gitignore
 
 referencias/
