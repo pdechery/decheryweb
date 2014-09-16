@@ -17,12 +17,5 @@ package.json
 gruntfile.js
 *sublime-project
 *.sublime-workspace
-.gitignore
 
-referencias/
 node_modules/
-fontes/
-img/
-psd/
-style/download
-download/
