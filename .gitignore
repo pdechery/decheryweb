@@ -19,3 +19,4 @@ gruntfile.js
 *.sublime-workspace
 
 node_modules/
+referencias/
