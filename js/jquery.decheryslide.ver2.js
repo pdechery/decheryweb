@@ -86,11 +86,13 @@
 		
 		this.$wrapper.animate({'marginLeft' : this.opts.slideWidth*(-this.opts.currentPosition)});
 		
-		if(this.opts.pagination) this.setActive(this.opts.currentPosition); // atualiza bullet da paginação
+		if(this.opts.navigation) this.setActive(this.opts.currentPosition); // atualiza bullet da paginação
 	
 	}
 
 	DecherySlide.prototype.setActive = function(number) {
+
+		console.log('number '+number+' steps '+this.steps);
 		
 		if(this.opts.pagination) {
 			var current = number > -1 ? number : 0;
