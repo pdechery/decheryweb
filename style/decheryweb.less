@@ -1,0 +1,303 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300|Montserrat:400,700|Open+Sans:300italic,400italic,700italic,400,300,700);
+
+/*
+
+	variáveis
+
+*/
+
+
+@orange:#e15f07;
+
+@darkorange: #b45300;
+
+@selector: #c0f0f3;
+
+@amarelo:#ffffcc;
+
+
+/*
+
+	mixin botão
+
+*/
+
+.btn(@color,@bgcolor) {
+	font-size: 1.2em;
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px;
+	width: 24px;
+	height: 24px;
+	border-radius: 24px;
+	color:@color;
+	background-color:@bgcolor;
+	&:hover {
+		color:@bgcolor;
+		background-color: @color;
+	}
+	i {
+		line-height:.8em;
+	}
+}
+
+body, html { 
+	margin: 0;
+	height: 100%;
+	background-size: cover;
+	-webkit-font-smoothing: antialiased; /* evitar que as fontes sejam automaticamente bold no Mac. */
+	font-size: 16px;
+	line-height: 1.5em;
+	text-align: center;
+}
+
+section, div, ul, li, p {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.panel {
+	background: url("../img/bg_orange.png") no-repeat 50% 50% fixed;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 4;
+	padding: 1px 0; /* evitar margin-collapsing */
+	h4 {
+		font-family: 'Open Sans';
+		font-weight: 400;
+		font-size: 1.6em;
+		margin-top: 0;
+		text-transform: lowercase;
+		color: @amarelo;
+	}
+	div.btn {
+		position: absolute;
+		margin-left: -25px;
+		left: 50%;
+		bottom: 4%;
+		a {
+			.btn(@amarelo, @orange);
+		}
+	}
+}
+
+div.area {
+	text-align: left;
+	color:#fff;
+	position: relative;
+	padding: 0;
+	width: 740px;
+	margin: 0 auto;
+	top: 15%;
+}
+
+/*
+
+	div display table
+
+*/
+
+.col-wrap {
+	display:table;
+	border-collapse:collapse;
+	width: 100%;
+	.col-body {
+		display:table-row;
+		.cell {
+			display:table-cell;
+			width: 50%;
+		}
+	}
+}
+
+/*
+
+	sections
+
+*/
+
+#cover {
+	div.area {
+		text-align: center;
+		top: 35%;
+		width: 480px;
+		height: 170px;
+		header { /* 'id' dechery css */
+			font-family: 'Open Sans';
+			font-size: 1.5em;
+			line-height: 1.5em;
+			color: #fff;
+			text-align: left;
+			& > div {
+				padding-left: 35px; /* estilo indentado */
+			}
+			span.selector {
+				color: @selector;
+			}
+			span.html {
+				margin: 0 0 20px;
+				padding: 0;
+				color: @amarelo;
+			}
+		}
+	}
+}
+
+#main {
+	background-image: url("../img/bg_orange.png");
+	nav { /* menu lateral direita */
+		ul {
+			margin: 0;
+			padding: 0;
+			border-left: 1px solid @amarelo;
+			li {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				font-family: 'Montserrat';
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: .7em;
+				cursor: pointer;
+				text-align: left;
+				a {
+					margin: 0;
+					padding:0 20px;
+					display: inline-block;
+					text-decoration: none;
+					color: @amarelo;
+					&.ativo {
+						color: #fff;
+					}
+					&:hover {
+						color:#fff;
+					}
+				}
+			}
+		}
+	}
+	.eu { /* wrapper */
+		display:none;
+		min-height: 400px;
+		position: relative;
+		font-family: 'Merriweather'; /* texto */
+		font-size: 1.1em;
+		font-weight: 400;
+		line-height: 1.6em;
+		p:first-child {
+			margin-top: 0;
+		}
+		a {
+			color: @selector;
+		}
+	}
+	ul.nobull { /* lista de skills */
+		margin: 0;
+		padding: 0;
+		li {
+			list-style-type: none;
+			padding: 0 0 5px;
+		}
+	}
+	#nav { /* posição do menu lateral */
+		display: none;
+		position: absolute;
+		top: 5%;
+		right: 2%;
+	}
+	a#icon { /* botão nav mobile */
+		display: none;
+		position: absolute;
+		top:0;
+		right:4%;
+		width: 34px;
+		height: 34px;
+		color: #fff;
+		border: 1px solid @amarelo;
+		border-top: 0;
+		text-align: center;
+		line-height: 2em;
+		z-index: 30;
+		&:hover {
+			background-color: @amarelo;
+			color: @orange;
+		}
+	}
+	#nav-mobile {
+		display: none;
+		position: absolute;
+		width: 100%;
+		top:34px;
+		left:0;
+		z-index: 40;
+		ul {
+			border:0;
+			border-top: 1px solid @amarelo;
+			li a {
+				text-align: center;
+				display: block;
+				width: auto;
+				border-bottom: 1px solid @amarelo;
+				background-color: @darkorange;
+				padding: 5% 0;
+				font-size: 1.2em;
+			}
+		}
+	}
+	#skill {  /* tabela skills */
+		.cell {
+			border: 1px solid #fff;
+			padding-left: 30px;
+		}
+		ul li i {
+			color: @amarelo;
+		}
+		h3 {
+			font-size: .8em;
+			font-family: 'Montserrat';
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+	#cv {
+		li {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+#main #work {
+	p#links {
+		margin-top: 40px;
+		font-size: .8em;
+	}
+}
+
+/*
+
+	clearfix
+
+*/
+
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility: hidden;
+}
+
+
+.clearfix {display:inline;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}

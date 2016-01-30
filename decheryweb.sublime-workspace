@@ -1,0 +1,557 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"que",
+				"querySelector"
+			],
+			[
+				"prev",
+				"previewTemplate"
+			],
+			[
+				"qu",
+				"querySelector"
+			],
+			[
+				"dro",
+				"dropzonePrix"
+			],
+			[
+				"ca",
+				"cand_id"
+			],
+			[
+				"va",
+				"var_dump"
+			],
+			[
+				"Re",
+				"Request"
+			],
+			[
+				"firs",
+				"firstOrFail"
+			],
+			[
+				"cand",
+				"candidato"
+			],
+			[
+				"first",
+				"firstOrCreate"
+			],
+			[
+				"erro",
+				"erro_upload"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"ne",
+				"new_user"
+			],
+			[
+				"n",
+				"new_user"
+			],
+			[
+				"candida",
+				"Candidato"
+			],
+			[
+				"email",
+				"email_verificado"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"tag",
+				"tagsIds"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 6699,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "style/decheryweb.less",
+			"settings":
+			{
+				"buffer_size": 4605,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"ide",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"i",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"inde",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: e",
+				"Package Control: Discover Packages"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 153.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/html/decheryweb/index.html",
+		"/var/www/html/decheryweb/style/decheryweb.less",
+		"/var/www/html/decheryweb/js/jquery.decheryslide.ver2.js",
+		"/var/www/html/decheryweb/Gruntfile.js",
+		"/var/www/html/prix-photo-web/public/js/dropzone_prix.js",
+		"/var/www/html/prix-photo-web/app/Http/Controllers/FotoController.php",
+		"/var/www/html/prix-photo-web/config/filesystems.php",
+		"/var/www/html/prix-photo-web/resources/views/candidato/perfil.blade.php",
+		"/var/www/html/prix-photo-web/public/js/galeria-prix.js",
+		"/var/www/html/prix-photo-web/app/Http/Controllers/CandidatoController.php",
+		"/var/www/html/prix-photo-web/app/Http/routes.php",
+		"/var/www/html/prix-photo-web/app/Http/Middleware/VerifyCsrfToken.php",
+		"/var/www/html/prix-photo-web/app/Http/Middleware/RedirectIfAuthenticated.php",
+		"/var/www/html/prix-photo-web/app/Http/Middleware/EncryptCookies.php",
+		"/var/www/html/prix-photo-web/app/Http/Middleware/Authenticate.php",
+		"/var/www/html/prix-photo-web/app/Http/Kernel.php",
+		"/var/www/html/prix-photo-web/app/Http/Middleware/CheckCandidato.php",
+		"/var/www/html/prix-photo-web/app/Http/Requests/CreateCandidato.php",
+		"/var/www/html/prix-photo-web/app/Http/Requests/CreateUsuario.php",
+		"/var/www/html/prix-photo-web/resources/views/includes/header.blade.php",
+		"/var/www/html/prix-photo-web/public/css/css/bootstrap.css",
+		"/var/www/html/prix-photo-web/app/Candidato.php",
+		"/var/www/html/prix-photo-web/app/Foto.php",
+		"/var/www/html/prix-photo-web/database/migrations/2016_01_06_004124_add_size_column_fotos_table.php",
+		"/var/www/html/prix-photo-web/database/migrations/2016_01_05_123217_add_create_date_fotos.php",
+		"/var/www/html/prix-photo-web/resources/views/candidato/entrar.blade.php",
+		"/var/www/html/prix-photo-web/app/Http/Controllers/UsuarioController.php",
+		"/var/www/html/prix-photo-web/resources/assets/less/prixphoto2014.less",
+		"/var/www/html/prix-photo-web/app/Usuario.php",
+		"/var/www/html/prix-photo-web/resources/views/candidato/forms/dados.blade.php",
+		"/var/www/html/prix-photo-web/resources/views/candidato/forms/upload.blade.php",
+		"/var/www/html/prix-photo-web/resources/views/candidato/upload.blade.php",
+		"/var/www/html/prix-photo-web/vendor/symfony/routing/Tests/Annotation/RouteTest.php",
+		"/var/www/html/prix-photo-web/composer.json",
+		"/var/www/html/prix-photo-web/composer.lock",
+		"/var/www/html/prix-photo-web/vendor/autoload.php",
+		"/var/www/html/prix-photo-web/vendor/composer/autoload_real.php",
+		"/var/www/html/prix-photo-web/config/app.php",
+		"/home/pdechery/Downloads/dropzone-4.2.0/dist/min/basic.min.css",
+		"/home/pdechery/Downloads/dropzone-4.2.0/test/test.js",
+		"/var/www/html/samplemail.php",
+		"/var/www/html/prix-photo-web/resources/views/includes/menu.blade.php",
+		"/var/www/html/prix-photo-web/app/Http/Requests/createCandidato.php",
+		"/var/www/html/prix-photo-web/resources/views/candidato/forms/projeto.blade.php",
+		"/var/www/html/prix-photo-web/app/Http/Requests/dadosCandidato.php",
+		"/var/www/html/prix-photo-web/app/Http/Requests/projetoCandidato.php",
+		"/var/www/html/prix-photo-web/resources/assets/less/form.less",
+		"/var/www/html/prix-photo-web/app/Http/Controllers/Auth/AuthController.php",
+		"/var/www/html/prix-photo-web/resources/views/candidato/inscricao.blade.php",
+		"/var/www/html/prix-photo-web/resources/views/candidato/ficha.blade.php",
+		"/var/www/html/prix-photo-web/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php",
+		"/var/www/html/prix-photo-web/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php",
+		"/var/www/html/prix-photo-web/resources/assets/less/prixphoto2014-fundocinza.less",
+		"/var/www/html/prix-photo-web/resources/views/includes/lateral.blade.php",
+		"/var/www/html/prix-photo-web/app/Http/Requests/Request.php",
+		"/var/www/html/prix-photo-web/database/migrations/2015_12_13_184159_numero_caracteres_password.php",
+		"/var/www/html/prix-photo-web/database/migrations/2015_11_22_180836_create_usuarios_table.php",
+		"/var/www/html/prix-photo-web/gulpfile.js",
+		"/var/www/html/prix-photo-web/public/css/app.css",
+		"/var/www/html/prix-photo-web/package.json",
+		"/var/www/html/prix-photo-web/database/factories/ModelFactory.php",
+		"/var/www/html/festival2014/index.php",
+		"/var/www/html/prix-photo-web/database/migrations/2015_10_25_234924_create_candidatos_table.php",
+		"/var/www/html/prix-photo-web/database/migrations/2015_11_22_233651_altera_nome_coluna_morph_usuarios.php",
+		"/var/www/html/prix-photo-web/app/Http/Controllers/Controller.php",
+		"/var/www/html/prix-photo-web/config/auth.php",
+		"/var/www/html/prix-photo-web/artisan",
+		"/var/www/html/prix-photo-web/resources/views/paginas/inscricao.blade.php",
+		"/var/www/html/prix-photo-web/database/migrations/2015_11_23_011921_remover_foreign_key_constraint.php",
+		"/var/www/html/prix-photo-web/resources/views/candidatos/ficha.blade.php",
+		"/var/www/html/prix-photo-web/resources/views/candidatos/inscricao.blade.php",
+		"/var/www/html/prix-photo-web/vendor/laravel/framework/src/Illuminate/Auth/AuthManager.php",
+		"/var/www/html/prix-photo-web/vendor/laravel/framework/src/Illuminate/Auth/AuthServiceProvider.php",
+		"/var/www/html/prix-photo-web/resources/views/inscricao.blade.php",
+		"/var/www/html/prix-photo-web/resources/views/ficha.blade.php",
+		"/var/www/html/prix-photo-web/resources/views/paginas/candidatos.blade.php",
+		"/var/www/html/prix-photo-web/database/migrations/2015_10_25_235526_create_fotos_table.php",
+		"/var/www/html/prix-photo-web/database/seeds/DatabaseSeeder.php",
+		"/home/pdechery/Documents/Prix Photo Web/modelo-bd.txt",
+		"/var/www/html/prix-photo-web/database/migrations/2014_10_12_100000_create_password_resets_table.php",
+		"/var/www/html/prix-photo-web/app/User.php",
+		"/home/pdechery/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/var/www/html/prix-photo-web/.env",
+		"/var/www/html/prix-photo-web/database/migrations/2015_10_25_235508_create_projetos_table.php",
+		"/var/www/html/prix-photo-web/database/migrations/2015_11_10_004329_create_cpf_column.php",
+		"/var/www/html/prix-photo-web/database/migrations/2015_11_10_012343_drop_unique_email.php",
+		"/var/www/html/prix-photo-web/app/Http/Controllers/Auth/PasswordController.php",
+		"/var/www/html/prix-photo-web/app/Projeto.php",
+		"/var/www/html/prix-photo-web/app/Providers/AuthServiceProvider.php",
+		"/var/www/html/prix-photo-web/config/database.php",
+		"/var/www/html/prixphoto2014/inscricao3.php",
+		"/var/www/html/prixphoto2014/edit-fotos.php",
+		"/var/www/html/furbook/app/Http/routes.php",
+		"/var/www/html/prix-photo-web/resources/views/master.blade.php",
+		"/var/www/html/larablog/app/Http/routes.php",
+		"/var/www/html/larablog/app/Http/Controllers/LarablogController.php",
+		"/var/www/html/larablog/app/Http/Controllers/PostsAdminController.php",
+		"/var/www/html/furbook/resources/views/cats/index.blade.php",
+		"/var/www/html/prix-photo-web/resources/views/lateral.blade.php",
+		"/var/www/html/furbook/resources/views/app.blade.php",
+		"/var/www/html/prix-photo-web/resources/views/footer.blade.php",
+		"/var/www/html/prix-photo-web/resources/views/menu.blade.php",
+		"/var/www/html/prix-photo-web/resources/views/header.blade.php",
+		"/var/www/html/furbook/resources/views/home.blade.php",
+		"/var/www/html/prixphoto2014/ajax-lista-projetos.php",
+		"/home/pdechery/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/var/www/html/prix-photo-web/app/Providers/RouteServiceProvider.php",
+		"/var/www/html/larablog/database/migrations/2015_06_28_140837_create_comments_table.php",
+		"/var/www/html/larablog/app/Post.php",
+		"/var/www/html/larablog/database/migrations/2015_06_28_171323_create_tags_posts_table.php",
+		"/var/www/html/larablog/resources/views/admin/posts/edit.blade.php",
+		"/var/www/html/larablog/resources/views/posts/index.blade.php",
+		"/var/www/html/larablog/resources/views/larablog/post.blade.php",
+		"/var/www/html/larablog/resources/views/larablog/posts.blade.php",
+		"/var/www/html/larablog/resources/views/admin/posts/index.blade.php",
+		"/var/www/html/larablog/app/Http/Controllers/PostController.php",
+		"/var/www/html/larablog/app/Tag.php",
+		"/var/www/html/larablog/resources/views/admin/posts/create.blade.php",
+		"/var/www/html/larablog/app/Comment.php",
+		"/var/www/html/larablog/app/User.php",
+		"/var/www/html/larablog/resources/views/admin/posts/_form.blade.php",
+		"/var/www/html/larablog/database/migrations/2015_06_28_170553_create_tags_table.php",
+		"/home/pdechery/Documents/Laravel Tips.txt",
+		"/var/www/html/furbook/.env",
+		"/var/www/html/furbook/config/database.php",
+		"/var/www/html/furbook/config/app.php",
+		"/var/www/html/larablog/bootstrap/app.php",
+		"/var/www/html/larablog/public/index.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/var/www/html/prix-photo-web"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"assets/css",
+			"acceptDimensions",
+			"syncDelete",
+			"removedfile",
+			"console",
+			"' ",
+			"undefined",
+			"Entity",
+			"dictMaxFilesExceeded",
+			"Auth",
+			"$request->file($request->file)",
+			"'file.'.$index",
+			"previewElement",
+			"previewNode",
+			"myDropzone",
+			"key",
+			"index",
+			"candidato",
+			"Candidato",
+			"candidato",
+			"CreateCandidato",
+			"textarea",
+			"{{ Form::close() }}",
+			"telefone",
+			"Telefone",
+			"telefone",
+			"Telefone",
+			"telefone",
+			"new_candidato",
+			"new_user",
+			"loginPath",
+			"form",
+			"@import",
+			"candidato.inscricao",
+			"/candidato/",
+			"first",
+			"AuthenticatesAndRegistersUsers",
+			"candidato",
+			"email",
+			"_l",
+			"userable_type",
+			"userable",
+			"App",
+			"proj_id",
+			"id=\"email_l\" ",
+			"asset",
+			"yield",
+			"yeld",
+			"title=\"\"",
+			"<?=TXT_CONTATO?>",
+			"<?=getUrlSite()?>",
+			"request",
+			"tagsIds",
+			"TaylorOtwell"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 6699,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6373,
+								6375
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3131.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "style/decheryweb.less",
+					"settings":
+					{
+						"buffer_size": 4605,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								560,
+								560
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1133.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"foto",
+				"app/Http/Controllers/FotoController.php"
+			],
+			[
+				"routes",
+				"app/Http/routes.php"
+			],
+			[
+				"fotoc",
+				"app/Http/Controllers/FotoController.php"
+			],
+			[
+				"candia",
+				"app/Candidato.php"
+			],
+			[
+				"candi",
+				"app/Http/Controllers/CandidatoController.php"
+			],
+			[
+				"can",
+				"app/Http/Controllers/CandidatoController.php"
+			],
+			[
+				"candidat",
+				"app/Http/Controllers/CandidatoController.php"
+			],
+			[
+				"candidato",
+				"app/Candidato.php"
+			],
+			[
+				"candida",
+				"app/Http/Controllers/CandidatoController.php"
+			],
+			[
+				"usuar",
+				"app/Usuario.php"
+			],
+			[
+				"rou",
+				"app/Http/routes.php"
+			],
+			[
+				"menu",
+				"resources/views/includes/menu.blade.php"
+			],
+			[
+				"cand",
+				"app/Http/Controllers/CandidatoController.php"
+			],
+			[
+				"usu",
+				"app/Http/Controllers/UsuarioController.php"
+			],
+			[
+				"usua",
+				"app/Usuario.php"
+			],
+			[
+				"ficha",
+				"resources/views/candidato/ficha.blade.php"
+			],
+			[
+				"aut",
+				"config/auth.php"
+			],
+			[
+				"usuario",
+				"app/Http/Controllers/UsuarioController.php"
+			],
+			[
+				"create",
+				"app/Http/Requests/CreateCandidato.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 251.0,
+	"status_bar_visible": true
+}
