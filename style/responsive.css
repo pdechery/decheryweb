@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 @media only screen and (min-device-width:320px) and (max-device-width:480px){.hide-mobile{display:none}#cover div.area,#main div.area{width:auto!important;height:auto}#cover div.area{width:260px!important}#cover div.area header{font-size:1.2em}#main div.btn{display:none}#main #nav,#main #nav-mobile{display:none}#main div.area{top:5%;padding:7%;font-size:.9em}#main div#cv{font-size:.9em}}
+=======
+@media only screen and (min-device-width:320px) and (max-device-width:480px){body{background-color:#193859}#cover div.area,#main div.area{width:auto!important;height:auto}#main div.btn{display:none}#main #nav,#main #nav-mobile{display:none}#main div.area{top:5%;padding:7%;font-size:.9em}#main div#skill .col-wrap{display:block;width:100%}#main div#skill .col-wrap .col-body{display:block}#main div#skill .col-wrap .col-body .cell{display:block;width:auto;border:0}}
+>>>>>>> 8e23eba0e750ea528a4ed88045a1000eccbc12ae

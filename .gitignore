@@ -8,9 +8,24 @@
 .Spotlight-V100
 .Trashes
 Icon?
+<<<<<<< HEAD
 Thumbs.db
 
 *.sublime-project
 *.sublime-workspace
 
 node_modules/
+=======
+ehthumbs.db
+Thumbs.db
+
+LEIA-ME PARA GIT.txt
+eu.rtf
+package.json
+gruntfile.js
+*sublime-project
+*.sublime-workspace
+
+node_modules/
+referencias/
+>>>>>>> 8e23eba0e750ea528a4ed88045a1000eccbc12ae
