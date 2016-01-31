@@ -13,42 +13,51 @@
 				$nav.filter(function(){return $(this).attr('data-target') == id}).addClass('ativo')
 			}
 		})
-		$nav.eq(el).trigger('click')
+		$nav.eq(el).trigger('click') // deixa visivel a bio
 	}
 
 	$(document).ready(function(){
 
-		// scroll
-		var $btns = $('.btn')
+		var nav = !mobile ? '#main #nav' : '#main a#icon'
 
-		$btns.each(function() {
-			var $target = $('a', this).attr('href')
-			var $panel = $('section'+$target)
-			$('a',this).click(function(e) {
-				e.preventDefault()
-				$('html, body').animate({scrollTop: $panel.offset().top}, 600, 'swing')
-			})
+		$('nav ul li a, #bio a').showDivs(0)
+
+		$('.btn:first').on('click', function(e){
+			e.preventDefault();
+			$.fn.fullpage.moveSectionDown();
 		})
+
+		$('.btn:eq(1)').on('click', function(e){
+			e.preventDefault();
+			$.fn.fullpage.moveSectionUp();
+		})
+
+		 $('#wrap').fullpage({
+		 	sectionSelector: '.panel',
+		 	verticalCentered: false,
+		 	css3: true,
+		 	afterLoad: function(anchorLink, index){
+		 		var loadedSection = $(this);
+		 		if (index == 1) {
+		 			$('.eu').hide()
+					$('#bio').toggle()
+					$('nav ul li a').removeClass('ativo').filter('[data-target="bio"]').addClass('ativo')
+		 		};
+				if(index == 2){
+					window.setTimeout(function(){
+						$(nav).fadeIn();
+					}, 200)
+				}
+			},
+			onLeave: function(index, nextIndex, direction){
+				if(index == 2) {
+					$(nav).fadeOut();
+				}
+			}
+		 });
 
 		var platform = navigator.userAgent.toLowerCase()
 		var mobile = platform.match(/(iphone|ipod|ipad|android)/)
-
-		var nav = !mobile ? '#main #nav' : '#main a#icon'
-
-		//console.log(platform+' '+nav)
-
-		$(window).scroll(function() {
-			if($(window).scrollTop() === $('#main').offset().top) {
-				$(nav).fadeIn().css('display','block')
-			} else {
-				if (!mobile) $(nav).fadeOut()
-			}
-			if($(window).scrollTop() === $('#cover').offset().top) {
-				$('.eu').hide()
-				$('#bio').toggle()
-				$('nav ul li a').removeClass('ativo').filter('[data-target="bio"]').addClass('ativo')
-			} 
-		})
 
 		if(mobile) {
 			var iconmenu = document.querySelector('a#icon')
@@ -63,8 +72,6 @@
 				}
 			})
 		}
-
-		$('nav ul li a, #bio a').showDivs(0)
 	
 	})
 

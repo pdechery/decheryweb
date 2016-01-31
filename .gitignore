@@ -1,0 +1,16 @@
+*.exe
+*.rar
+*.txt
+*.css
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+Thumbs.db
+
+*.sublime-project
+*.sublime-workspace
+
+node_modules/
