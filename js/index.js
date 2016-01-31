@@ -18,6 +18,9 @@
 
 	$(document).ready(function(){
 
+		var platform = navigator.userAgent.toLowerCase()
+		var mobile = platform.match(/(iphone|ipod|ipad|android)/)
+
 		var nav = !mobile ? '#main #nav' : '#main a#icon'
 
 		$('nav ul li a, #bio a').showDivs(0)
@@ -56,9 +59,6 @@
 			}
 		 });
 
-		var platform = navigator.userAgent.toLowerCase()
-		var mobile = platform.match(/(iphone|ipod|ipad|android)/)
-
 		if(mobile) {
 			var iconmenu = document.querySelector('a#icon')
 			var main = document.querySelector('#main')
@@ -68,7 +68,7 @@
 					$('html, body').animate({scrollTop: $('#main').offset().top}, 200, 'swing')
 					$('#nav-mobile').show()
 				} else {
-					$('#nav-mobile').toggle()
+					$('#nav-mobile').hide()
 				}
 			})
 		}
