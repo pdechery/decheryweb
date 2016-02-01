@@ -60,17 +60,19 @@
 		 });
 
 		if(mobile) {
-			var iconmenu = document.querySelector('a#icon')
-			var main = document.querySelector('#main')
+
+			var iconmenu = document.querySelector('a#icon'),
+				main = document.querySelector('#main'),
+				$nav = $('#nav-mobile');
+			
 			main.addEventListener('click', function(e){
-				e.preventDefault()
-				if (e.target === iconmenu) {
-					$('html, body').animate({scrollTop: $('#main').offset().top}, 200, 'swing')
-					$('#nav-mobile').show()
+				if (e.target === iconmenu || e.target === $nav.filter('a')) {
+					$nav.show()
 				} else {
-					$('#nav-mobile').hide()
+					$nav.hide()
 				}
 			})
+
 		}
 	
 	})
