@@ -63,13 +63,13 @@
 
 			var iconmenu = document.querySelector('a#icon'),
 				main = document.querySelector('#main'),
-				$nav = $('#nav-mobile');
+				$menu_mobile = $('#nav-mobile');
 			
 			main.addEventListener('click', function(e){
-				if (e.target === iconmenu || e.target === $nav.filter('a')) {
-					$nav.show()
+				if (e.target === iconmenu || e.target === $menu_mobile.filter('a')) {
+					$menu_mobile.show()
 				} else {
-					$nav.hide()
+					$menu_mobile.hide()
 				}
 			})
 
