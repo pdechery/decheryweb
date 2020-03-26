@@ -6,14 +6,23 @@
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
-	body {
-		background-color: #193859;
+	.hide-mobile {
+		display: none;
 	}
 
 	#cover, #main {
 		div.area {
 			width: auto!important;
 			height: auto;
+		}
+	}
+
+	#cover {
+		div.area {
+			width: 260px!important;
+			header {
+				font-size: 1.2em;
+			}
 		}
 	}
 
@@ -30,18 +39,9 @@
 			font-size: .9em;
 		}
 		div#skill {
-			.col-wrap {
-				display:block;
-				width: 100%;
-				.col-body {
-					display:block;
-					.cell {
-						display:block;
-						width: auto;
-						border: none;
-					}
-				}
-			}
+		}
+		div#cv {
+			font-size: .9em;
 		}
 	}
 

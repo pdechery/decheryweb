@@ -1,4 +1,12 @@
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300|Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300|Montserrat:400,700|Open+Sans:300italic,400italic,700italic,400,300,700);
+
+/*
+
+	Animação botão
+
+*/
+
+
 
 /*
 
@@ -7,27 +15,25 @@
 */
 
 
-@azul:#9db9da;
+@orange:#e15f07;
 
-@azulfundo:#22456a;
+@darkorange: #b45300;
 
-@azulblusa: #193859;
-
-@orange:#cc6600;
-
-@amarelo:#e8b64c;
+@selector: #c0f0f3;
 
 @amarelo:#ffffcc;
+
+@azulescuro: #173657;
 
 
 /*
 
-	botão
+	mixin botão
 
 */
 
-.btn(@color,@bgcolor) {
-	font-size: 1.2em;
+.btn(@color, @bgcolor, @hover) {
+	font-size: 2em;
 	display: inline-block;
 	text-decoration: none;
 	padding: 5px;
@@ -37,23 +43,17 @@
 	color:@color;
 	background-color:@bgcolor;
 	&:hover {
-		color:@bgcolor;
-		background-color: @color;
+		color: @hover;
+		background-color: transparent;
 	}
 	i {
 		line-height:.8em;
 	}
 }
 
-.header_uppercase {
-	text-transform: uppercase;
-	font-size: .9em;
-	line-height: 1.3em;
-	font-weight: 700;
-}
-
 body, html { 
 	margin: 0;
+	background: url("../img/bg_blue.png") no-repeat 50% 50%;
 	height: 100%;
 	background-size: cover;
 	-webkit-font-smoothing: antialiased; /* evitar que as fontes sejam automaticamente bold no Mac. */
@@ -64,7 +64,7 @@ body, html {
 
 section, div, ul, li, p {
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
 	box-sizing: border-box;
 }
 
@@ -76,13 +76,27 @@ a {
 }
 
 .panel {
-	background: url("../img/bg_orange.png") no-repeat 50% 50% fixed;
 	background-size: cover;
-	width: 100%;
-	height: 100%;
 	position: relative;
 	z-index: 4;
 	padding: 1px 0; /* evitar margin-collapsing */
+	h4 {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 1.4em;
+		margin-top: 0;
+		color: @amarelo;
+	}
+	div.btn {
+		position: absolute;
+		margin-left: -25px;
+		left: 50%;
+		bottom: 4%;
+		a {
+			.btn(#fff, transparent, @amarelo);
+		}
+	}
 }
 
 div.area {
@@ -90,17 +104,10 @@ div.area {
 	color:#fff;
 	position: relative;
 	padding: 0;
-	width: 740px;
+	// width: 740px;
+	width: 620px;
 	margin: 0 auto;
 	top: 15%;
-}
-
-div.btn {
-	width: 100%;
-	text-align: center;
-	a {
-		.btn(#fff, @azulfundo);
-	}
 }
 
 /*
@@ -131,42 +138,36 @@ div.btn {
 #cover {
 	div.area {
 		text-align: center;
-		width: 380px;
-		height: 170px;
 		top: 35%;
-		header {
-			h1 {
-				font-family: 'Montserrat';
-				font-size: 1.8em;
-				font-weight: 700;
-				text-transform: uppercase;
-				margin: 0 0 15px;
+		width: 480px;
+		height: 170px;
+		header { /* 'id' dechery css */
+			font-family: 'Open Sans';
+			font-size: 1.5em;
+			line-height: 1.5em;
+			color: #fff;
+			text-align: left;
+			& > div {
+				padding-left: 35px; /* estilo indentado */
 			}
-			h2 {
-				font-family: 'Merriweather';
-				font-size: 1.3em;
-				font-weight: 300;
-				margin: 0 0 30px;
-				color: #000;
+			span.selector {
+				color: @selector;
+			}
+			span.html {
+				margin: 0 0 20px;
+				padding: 0;
+				color: @amarelo;
 			}
 		}
 	}
 }
 
 #main {
-	background-image: url("../img/bg_blue.png");
-	div.btn {
-		position: absolute;
-		bottom: 4%;
-		a {
-			.btn(#fff, @azulblusa);
-		}
-	}
-	nav {
+	nav { /* menu lateral direita */
 		ul {
 			margin: 0;
 			padding: 0;
-			border-left: 1px solid @azul;
+			border-left: 1px solid #fff;
 			li {
 				list-style-type: none;
 				margin: 0;
@@ -182,50 +183,33 @@ div.btn {
 					padding:0 20px;
 					display: inline-block;
 					text-decoration: none;
-					color: @azul;
+					color: #fff;
 					&.ativo {
-						color: #fff;
+						color: @amarelo;
 					}
 					&:hover {
-						color:#fff;
+						color: @amarelo;
 					}
 				}
 			}
 		}
 	}
-	h4 {
-		font-family: 'Montserrat';
-		font-weight: 700;
-		margin-top: 0;
-		text-transform: uppercase;
-		font-size: 1.3em;
-	}
 	.eu { /* wrapper */
 		display:none;
 		min-height: 400px;
 		position: relative;
-		font-family: 'Merriweather';
+		font-family: 'Merriweather'; /* texto */
 		font-size: 1.1em;
 		font-weight: 400;
-		line-height: 1.7em;
+		line-height: 1.6em;
 		p:first-child {
 			margin-top: 0;
 		}
 		a {
-			color: @azul;
-		}
-		.back-to-bio {
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			text-align: right;
-			width: 100px;
-			font-size: .9em;
-			margin: 0;
-			padding: 0;
+			color: @selector;
 		}
 	}
-	ul.nobull {
+	ul.nobull { /* lista de skills */
 		margin: 0;
 		padding: 0;
 		li {
@@ -233,13 +217,13 @@ div.btn {
 			padding: 0 0 5px;
 		}
 	}
-	#nav {
+	#nav { /* posição do menu lateral */
 		display: none;
 		position: absolute;
 		top: 5%;
 		right: 2%;
 	}
-	a#icon {
+	a#icon { /* botão nav mobile */
 		display: none;
 		position: absolute;
 		top:0;
@@ -247,14 +231,14 @@ div.btn {
 		width: 34px;
 		height: 34px;
 		color: #fff;
-		border: 1px solid @azul;
+		border: 1px solid #fff;
 		border-top: 0;
 		text-align: center;
 		line-height: 2em;
 		z-index: 30;
 		&:hover {
-			background-color: @azul;
-			color: @azulfundo;
+			background-color: @azulescuro;
+			color: @amarelo;
 		}
 	}
 	#nav-mobile {
@@ -266,21 +250,16 @@ div.btn {
 		z-index: 40;
 		ul {
 			border:0;
-			border-top: 1px solid @azul;
+			border-top: 1px solid #fff;
 			li a {
 				text-align: center;
 				display: block;
 				width: auto;
-				border-bottom: 1px solid @azul;
-				background-color: @azulfundo;
+				border-bottom: 1px solid #fff;
+				background-color: @azulescuro;
 				padding: 5% 0;
 				font-size: 1.2em;
 			}
-		}
-	}
-	#bio {
-		h4 {
-			font-size: 1.3em;
 		}
 	}
 	#skill {  /* tabela skills */
@@ -289,19 +268,13 @@ div.btn {
 			padding-left: 30px;
 		}
 		ul li i {
-			color: @azul;
+			color: @amarelo;
 		}
 		h3 {
 			font-size: .8em;
 			font-family: 'Montserrat';
 			font-weight: 700;
 			text-transform: uppercase;
-		}
-		div#tools {
-			li {
-				font-size: .9em;
-				padding: 0 0 0;
-			}
 		}
 	}
 	#cv {
@@ -312,182 +285,9 @@ div.btn {
 }
 
 #main #work {
-	div#portfolio {
-		width: 705px;
-		margin: 45px 0 0 35px;
-		padding-left: 0!important;
-		div.thumb {
-			width: 215px;
-			position:relative;
-			margin: 0 0 30px 30px;
-			float: left;
-			div.caption  {
-				width: 215px;
-				height: 135px;
-				position: absolute;
-				top: 0;
-				left: 0;
-				display: none;
-				background:url('../img/bg.png') repeat;
-				border:1px solid @azul;
-				cursor:pointer;
-				text-align: center;
-				font-family: 'Montserrat';
-				font-weight: 400;
-				text-transform: uppercase;
-				font-size: 1em;
-				line-height: 1.3em;
-				padding-top: 40px;
-				a {
-					color:@azul;
-					text-decoration: none;
-					&:hover {
-						color:#fff;
-					}
-				}
-			}
-		}
-		.first {
-			margin-left: 0!important;
-		}
-	}
-	div#portfolio + div {
-		clear: both;
-		margin: 0 0 0 35px;
-		font-size: .9em;
-	}
-}
-
-.lightbox {
-	z-index: 5;
-	display: none;
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
-	height: 100%;
-	background:url('../img/bg-lightbox-black.png') repeat;
-	div.close {
-		position: absolute;
-		top: 3%;
-		right: 3%;
-		width: 20px;
-		height: 20px;
-		text-align: center;
-		z-index: 400;
-		a {
-			color: #fff;
-			&:hover {
-				color: #666;
-			}
-		}
-	}
-}
-
-div.proj_container {
-	width: 440px;
-	margin: 0 auto;
-	overflow: hidden;
-	position: relative;
-	div.proj {
-		width: 440px;
-		height: 540px;
-		float: left;
-		position: relative;
-		div.info {
-			background-color: @azulblusa;
-			opacity: .9;
-			position: absolute;
-			bottom: 30px;
-			left: 0;
-			width: 440px;
-			height: 40px;
-			div.txt {
-				position: absolute;
-				width: 440px;
-				padding: 10px 0 0 20px;
-				font-family: 'Montserrat';
-				text-transform: uppercase;
-				font-weight: 400;
-				font-size: .8em;
-				line-height: 1.6em;
-			}
-		}
-		div.label {
-			width: 440px;
-			position: absolute;
-			z-index: 3;
-			text-align: left;
-			margin: 0 auto;
-			font-family: 'Montserrat';
-			text-transform: uppercase;
-			font-weight: 400;
-			font-size: .7em;
-			line-height: 1.8em;
-			a {
-				color: @azul;
-				&:hover {
-					text-decoration:none;
-					color: #fff;
-				}
-			}
-			span {
-				float: right;
-				i {
-					cursor: hand;
-				}
-			}
-		}
-	}
-}
-
-div.navigation {
-	position: absolute;
-	top:200px;
-	width:100%;
-	height:50px;
-	padding-left: 0;
-	a {
-		display:block;
-		position:absolute;
-		top: 0;
-		padding: 10px;
-		cursor: pointer;
-		font-size: 1.2em;
-		&.nextImg {
-			right:0;
-		}
-		&.prevImg {
-			left:0;
-		}
-		&:hover {
-			text-decoration: none;
-			color:#fff;
-		}
-		&.off {
-			color: #666;
-		}
-	}
-}
-
-ul#slidenav { 
-	width: 440px;
-	margin: 20px auto 0;
-	padding: 0;
-	text-align: center;
-	list-style: none;
-	li {
-		 float: left;
-		 margin-left: 10px;
-		 a {
-			height: 12px;
-			width: 12px;
-			display: inline-block;
-			border-radius: 12px;
-			&.active, &:hover {
-				background-color:#fff;
-			}
-		}
+	p#links {
+		margin-top: 40px;
+		font-size: .8em;
 	}
 }
 

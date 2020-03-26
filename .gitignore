@@ -14,8 +14,7 @@ LEIA-ME PARA GIT.txt
 eu.rtf
 package.json
 gruntfile.js
-*sublime-project
-*.sublime-workspace
+*.sublime-*
 
 node_modules/
 referencias/

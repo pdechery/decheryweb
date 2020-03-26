@@ -4,9 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 	<title>Dechery Web</title>
-	<link rel="stylesheet" href="style/decheryweb.css?v=3">
+	<link rel="stylesheet" href="style/decheryweb.css?v=4">
 	<link rel="stylesheet" href="style/responsive.css?v=3">
 	<link rel="stylesheet" href="style/font-awesome.min.css">
+	<link rel="stylesheet" href="style/jquery.fullpage.min.css">
+	<link rel="stylesheet" href="style/hover.css">
 </head>
 <body>
 	
@@ -24,256 +26,154 @@
 
 	</script>
 
-	<section id="cover" class="panel">
-
-		<div class="area">
-
-			<header>
-				<h1>pierre dechery</h1>
-				<h2>webdesigner & developer</h2>
-			</header>
-
-			<div class="btn">
-				<a href="#main"><i class="fa fa-angle-down fa-lg"></i></a>
-			</div>
-
-		</div>
-
-	</section>
-
-	<section id="main" class="panel">
-
-		<div class="btn">
-			<a href="#cover"><i class="fa fa-angle-up fa-lg"></i></a>
-		</div>
-
-		<a id="icon" href="#"><i class="fa fa-angle-down"></i></a>
-			
-		<nav id="nav-mobile">
-			<ul>
-				<li><a href="#" data-target="bio">bio</a></li>
-				<li><a href="#" data-target="skill">skills</a></li>
-				<!-- <li><a href="/blog" target="_blank">blog</a></li> -->
-				<li><a href="#" data-target="contato">contato</a></li>
-				<li><a href="#" data-target="cv">cv</a></li>
-			</ul>
-		</nav>
-
-		<nav id="nav">
-			<ul>
-				<li><a href="#" data-target="bio">bio</a></li>
-				<li><a href="#" data-target="skill">skills</a></li>
-				<!-- <li><a href="/blog" target="_blank">blog</a></li> -->
-				<li><a href="#" data-target="work">works</a></li>
-				<li><a href="#" data-target="contato">contato</a></li>
-				<li><a href="#" data-target="cv">cv</a></li>
-			</ul>
-		</nav>
+	<div id="wrap">
 		
-		<div class="area">
-				
-			<div id="bio" class="eu">
-				<h4>Olá</h4>
-				<p>Sou um webdesigner e desenvolvedor web carioca.</p>
-				<p>Tenho formação em design mas desde que conheci HTML e CSS passei a me dedicar cada vez mais ao código.</p>
-				<p>Hoje tenho sólida experiência no desenvolvimento com CSS, Javascript e também PHP e MySQL.</p>
-				<p>Me considero um "fazedor web" e me interesso por todos aspectos relativos ao desenvolvimento de um website ou aplicação web.</p>
-				<p>Se achar que meus serviços podem ajudá-lo, <a href="#" data-target="contato">deixe-me saber como.</a></p>
-				<p>Obrigado pela visita!</p>
+		<section id="cover" class="panel">
+
+			<div class="btn hvr-wobble-vertical">
+				<a href="#"><i class="fa fa-angle-down fa-lg"></i></a>
 			</div>
 
-			<div id="skill" class="eu">
-				<h4>Skills</h4>
-				<div class="col-wrap">
-					<div class="col-body">
-						<div class="cell">
-							<h3>coding&nbsp;&nbsp;<i class="fa fa-code"></i></h3>
-							<ul class="nobull">
-								<li>HTML</li>
-								<li>CSS</li>
-								<li>Javascript</li>
-								<li>jQuery</li>
-								<li>PHP</li>
-								<li>MySQL</li>
-							</ul>
-						</div>
-						<div id="tools" class="cell">
-							<h3>toolkit&nbsp;&nbsp;<i class="fa fa-wrench"></i></h3>
-							<ul class="nobull">
-								<li>Sublime Text</li>
-								<li>LESS</li>
-								<li>Git</li>
-								<li>Font Awesome</li>
-								<li>Bootstrap</li>
-								<li>Suite Adobe</li>
-								<li>etc...</li>
-								<li>&nbsp;</li>
-							</ul>
-						</div>
+			<div class="area">
+
+				<header>
+					<span class="html">&#35;dechery&nbsp;&nbsp;&#123;</span>
+					<div>
+						<span class="selector">quem:</span> "pierre dechery";<br>
+						<span><span class="selector">o-que:</span> "desenvolvedor web";<br></span>
+						<!-- <span class="selector">faz:</span> css, html, js, php etc; -->
+						<span class="selector">color:</span> blue;
 					</div>
-				</div>
+					<span class="html">&#125;</span>
+				</header>
+
 			</div>
 
-			<div id="contato" class="eu">
-				<h4>entre em contato</h4>
-				<ul class="nobull">
-					<li><i class="fa fa-envelope"></i>&nbsp;&nbsp;<a href="mailto:pierre@decheryweb.com.br">pierre@decheryweb.com.br</a></li>
-					<li><i class="fa fa-mobile-phone"></i>&nbsp;&nbsp;021 99134 3344</a></li>
-					<li><i class="fa fa-skype"></i>&nbsp;&nbsp;decheryweb</li>
-				</ul>
+		</section>
+
+		<section id="main" class="panel">
+
+			<div class="btn hvr-wobble-vertical">
+				<a href="#"><i class="fa fa-angle-up fa-lg"></i></a>
 			</div>
 
-			<div id="cv" class="eu">
-				<h4>Breve currículo</h4>
+			<a id="icon" href="#"><i class="fa fa-angle-down"></i></a><!-- mobile -->
+				
+			<nav id="nav-mobile">
 				<ul>
-					<li>Me formei em Desenho Industrial (habilitação Comunicação Visual) <br>na PUC-Rio em 2000</li>
-					<li>Passei pelas seguintes empresas: <a href="http://www.telelistas.net/" target="_blank">Telelistas</a>, Octopop (antigo Gazzag) <br class="mobile-hide">e <a href="http://softbrazil.com.br/agenciaweb/" target="_blank">Softbrazil</a></li>
-					<li>Atualmente sou Webmaster na <a href="http://rioaliancafrancesa.com.br/" target="_blank">Aliança Francesa do Rio de Janeiro</a></li>
-					<li>Também sou músico e ocasionalmente <a href="http://rateyourmusic.com/~pierremusico" target="_blank">escrevo sobre o assunto</a></li>
-					<li>Para mais infos visite meu perfil no Linkedin: </i>&nbsp;&nbsp;<a href="http://br.linkedin.com/in/pierredz" target="_blank">br.linkedin.com/in/pierredz</a></li>
+					<li><a href="#" data-target="bio">bio</a></li>
+					<li><a href="#" data-target="skill">skills</a></li>
+					<li><a href="#" data-target="work">works</a></li>
+					<li><a href="#" data-target="cv">cv</a></li>
+					<li><a href="#" data-target="contato">contato</a></li>
 				</ul>
-			</div>
+			</nav>
 
-			<div id="work" class="eu">
-
-				<h4>Works</h4>
-
-				<div id="portfolio" class="clearfix">
-				
-					<div class="thumb first">
-						<div class="caption">
-							<a href="#arena">Arena<br> Carioca</a>
-						</div>
-						<img src="img/sites/arena_thumb.png">
-					</div>
-	 
-					<div class="thumb">
-						<div class="caption">
-							<a href="#britschool">Brittish<br> School</a>
-						</div>
-						<img src="img/sites/bschool_thumb.jpg">
-					</div>
-
-					<div class="thumb">
-						<div class="caption">
-							<a href="#afrio">Aliança<br> Francesa</a>
-						</div>
-						<img src="img/sites/afrio_thumb.jpg">
-					</div>
-
+			<nav id="nav">
+				<ul>
+					<li><a href="#" data-target="bio">bio</a></li>
+					<li><a href="#" data-target="skill">skills</a></li>
+					<li><a href="#" data-target="work">works</a></li>
+					<li><a href="#" data-target="cv">cv</a></li>
+					<li><a href="#" data-target="contato">contato</a></li>
+				</ul>
+			</nav>
+			
+			<div class="area">
+					
+				<div id="bio" class="eu">
+					<h4>Olá</h4>
+					<p>Meu nome é Pierre Dechery.<p>
+					<p>Sou um desenvolvedor web full-stack, com experiência em back e front-end.</p>
+					<p>Já que está aqui, porque não <a href="#" data-target="work">conhecer meus trabalhos</a> e <a href="#" data-target="cv">saber um pouco mais sobre mim?</a></p>
+					<p>Fique à vontade também para <a href="#" data-target="contato">entrar em contato.</a></p>
 				</div>
 
-				<div>
+				<div id="skill" class="eu">
+					<h4>Skills</h4>
+					<div class="col-wrap">
+						<div class="col-body">
+							<div class="cell">
+								<h3>coding&nbsp;&nbsp;<i class="fa fa-code"></i></h3>
+								<ul class="nobull">
+									<li>PHP 7</li>
+									<li>Python 3</li>
+									<li>CSS/LESS</li>
+									<li>Javascript/ES6</li>
+								</ul>
+							</div>
+							<div id="tools" class="cell">
+								<h3>toolkit&nbsp;&nbsp;<i class="fa fa-wrench"></i></h3>
+								<ul class="nobull">
+									<li>Git</li>
+									<li>Wordpress</li>
+									<li>Laravel</li>
+									<li>Django</li>
+									<li>nginx/Apache</li>
+									<li>npm</li>
+									<li>Ubuntu 16.04</li>
+									<li>&nbsp;</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="contato" class="eu">
+					<h4>entre em contato</h4>
+					<ul class="nobull">
+						<li><i class="fa fa-envelope"></i>&nbsp;&nbsp;<a href="mailto:pierre@decheryweb.com.br">pierre@decheryweb.com.br</a></li>
+						<li><i class="fa fa-mobile-phone"></i>&nbsp;&nbsp;021 99331 6438</a></li>
+						<li><i class="fa fa-skype"></i>&nbsp;&nbsp;decheryweb</li>
+						<li><i class="fa fa-linkedin-square"></i>&nbsp;&nbsp;<a href="https://br.linkedin.com/in/pdechery">br.linkedin.com/in/pdechery</a></li>
+						<li><i class="fa fa-github"></i>&nbsp;&nbsp;<a href="https://github.com/pdechery">github.com/pdechery</a></li>
+					</ul>
+				</div>
+
+				<div id="cv" class="eu">
+					<h4>Breve currículo</h4>
+					<ul>
+						<li>Sou formado em Desenho Industrial (habilitação Comunicação Visual) pela PUC-Rio (2001)</li>
+						<li>Trabalhei como developer em algumas empresas, entre elas: <a href="http://dapp.fgv.br/" target="_blank">FGV DAPP</a>, <a href="http://www.tuut.com.br/" target="_blank">TUUT</a>, <a href="http://rioaliancafrancesa.com.br/" target="_blank">Aliança Francesa</a>, <a href="http://softbrazil.com.br/agenciaweb/" target="_blank">Softbrazil</a> e <a href="http://www.telelistas.net/" target="_blank">Telelistas</a></li>
+						<li>Atualmente sou desenvolvedor web na Veus Technology</a></li>
+						<li>Fiz cursos de desenvolvimento web no <a href="http://www.ilearn.com.br/sitenovo/" target="_blank">iLearn</a>, <a href="https://www.alura.com.br/" target="_blank">Alura</a>, <a href="http://www.schoolofnet.com/" target="_blank">School of Net</a> e <a href="https://laracasts.com/" target="_blank">laracasts.com</a>, entre outros</li>
+						<li>Para mais informações acesse meu <a href="https://br.linkedin.com/in/pdechery">perfil no linkedin</a></li>
+					</ul>
+				</div>
+
+				<div id="work" class="eu">
+
+					<h4>Works</h4>
+
 					<p>Trabalhos mais recentes:</p>
 					<ul>
-						<li><a href="http://www.prixphotoaliancafrancesa.com.br/" target="_blank">Prix Photo Web 2014</a></li>
-						<li><a href="http://www.interessa.org" target="_blank">interessa.org</a></li>
+						<li><a href="http://prixphotoweb.com.br" target="_blank">Prix Photo Web</a></li>
+						<li><a href="http://visit.rio" target="_blank">visit.rio</a></li>
+						<li><a href="http://www.eavparquelage.rj.gov.br/memoria/" target="_blank">Memória Lage</a></li>
+						<li><a href="http://museubispodorosario.com/" target="_blank">Museu Bispo do Rosário</a></li>
+						<li><a href="http://nelsonfelix.com.br" target="_blank">nelsonfelix.com.br</a></li>
 					</ul>
-					<p>Muito mais no github: <a href="https://github.com/pdechery" target="_blank">github.com/pdechery</a></p>
+
+					<p>Trabalhos antigos:</p>
+					<ul>
+						<li><a href="http://www.britishschool.g12.br" target="_blank">British School</a></li>
+						<li><a href="http://www.interessa.org" target="_blank">interessa.org</a></li>
+						<li><a href="https://www.rioaliancafrancesa.com.br/mostrafrancofonia" target="_blank">Mostra de cinema francês</a></li>
+						<li><a href="http://www.decheryweb.com.br/portfolio" target="_blank">Portfolio 2013</a></li>
+					</ul>
+
+					<p id="links">Visite também meus perfis no <a href="https://github.com/pdechery" target="_blank">Github</a> e no <a href="https://br.pinterest.com/pdechery/" target="_blank">Pinterest</a>.</p>
 				</div>
 
 			</div>
 
-		</div>
+		</section>
 
-	</section>
-
-	<section id="afrio" class="lightbox">
-
-		<div class="close">
-			<a href="#"><i class="fa fa-times-circle"></i></a>
-		</div>
-		
-		<div class="area">
-
-			<div class="proj_container">
-
-				<div class="proj">
-					<img src="img/sites/afrio_full1.jpg">
-					<img src="img/sites/afrio_full2.jpg">
-					<img src="img/sites/afrio_full3.jpg">
-					<div class="info">
-						<div class="txt">Joomla, PHP/MySQL, Design</div>
-	 				</div>
-	 				<div class="label">
-	 					<span><a href="http://www.rioaliancafrancesa.com.br" target="_blank">visitar&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></span>
-	 				</div>
-				</div>
-
-			</div>
-		
-		</div>
-
-	</section>
-
-	<section id="britschool" class="lightbox">
-
-		<div class="close">
-			<a href="#"><i class="fa fa-times-circle"></i></a>
-		</div>
-	
-		<div class="area">
-
-			<div class="proj_container">
-
-				<div class="proj">
-					<div class="ribbon"></div>
-					<img src="img/sites/britschooll_full.png">
-					<img src="img/sites/britschooll_full2.png">
-					<div class="info">
-						<div class="txt">Wordpress, PHP/MySQL</div>
-	 				</div>
-	 				<div class="label">
-	 					<span><a href="http://www.britishschool.g12.br/" target="_blank">visitar&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></span>
-	 				</div>
-	 			</div>
-
-	 		</div>
-
-	 	</div>
-
-	</section>
-
-	<section id="arena" class="lightbox">
-
-		<div class="close">
-			<a href="#"><i class="fa fa-times-circle"></i></a>
-		</div>
-		
-		<div class="area">
-
-			<div class="proj_container">
-
-				<div class="proj">
-					<div class="ribbon"></div>
-					<img src="img/sites/arena_gd.png">
-					<img src="img/sites/arena2_gd.png">
-					<div class="info">
-						<div class="txt">Wordpress, PHP/MySQL</div>
-					</div>
-					<div class="label">
-	 					<span><a href="http://www.rec-design.com/arenacarioca/" target="_blank">visitar (em desenvolvimento)&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></span>
-	 				</div>
-				</div>
-
-			</div>
-		
-		</div>
-
-	</section>
+	</div>
 
 	<script src="js/jquery.js"></script>
-	<script src="js/index.js?version=2"></script>
-	<script src="js/jquery.decheryslide.ver2.js"></script>
-
-	<script>
-		$(document).ready(function(){
-			$('#afrio, #arena, #britschool').decherySlide({
-	  			navigation:true,
-	  			auto:false,
-	  		});
-		});
-	</script>
+	<script src="js/index.js?version=3"></script>
+	<script src="js/jquery.fullpage.min.js"></script>
 
 </body>
 </html>
