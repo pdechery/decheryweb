@@ -21,7 +21,8 @@
 		var platform = navigator.userAgent.toLowerCase()
 		var mobile = platform.match(/(iphone|ipod|ipad|android)/)
 
-		var nav = !mobile ? '#main #nav' : '#main a#icon'
+		var nav = !mobile ? '#main aside' : '#main a#icon'
+			icones = '#icones';
 
 		$('nav ul li a, #bio a').showDivs(0)
 
@@ -35,29 +36,29 @@
 			$.fn.fullpage.moveSectionUp();
 		})
 
-		 $('#wrap').fullpage({
-		 	sectionSelector: '.panel',
-		 	verticalCentered: false,
-		 	css3: true,
-		 	afterLoad: function(anchorLink, index){
-		 		var loadedSection = $(this);
-		 		if (index == 1) {
-		 			$('.eu').hide()
+		$('#wrap').fullpage({
+			sectionSelector: '.panel',
+			verticalCentered: false,
+			css3: true,
+			afterLoad: function(anchorLink, index){
+				var loadedSection = $(this);
+				if (index == 1) {
+					$('.eu').hide()
 					$('#bio').toggle()
 					$('nav ul li a').removeClass('ativo').filter('[data-target="bio"]').addClass('ativo')
-		 		};
+				};
 				if(index == 2){
 					window.setTimeout(function(){
-						$(nav).fadeIn();
+						$(nav).add(icones).fadeIn();
 					}, 200)
 				}
 			},
 			onLeave: function(index, nextIndex, direction){
 				if(index == 2) {
-					$(nav).fadeOut();
+					$(nav).add(icones).fadeOut();
 				}
 			}
-		 });
+		});
 
 		if(mobile) {
 

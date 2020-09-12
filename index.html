@@ -7,8 +7,6 @@
 	<link rel="stylesheet" href="style/decheryweb.css?v=4">
 	<link rel="stylesheet" href="style/responsive.css?v=3">
 	<link rel="stylesheet" href="style/font-awesome.min.css">
-	<link rel="stylesheet" href="style/jquery.fullpage.min.css">
-	<link rel="stylesheet" href="style/hover.css">
 </head>
 <body>
 	
@@ -30,21 +28,19 @@
 		
 		<section id="cover" class="panel">
 
-			<div class="btn hvr-wobble-vertical">
+			<div class="btn">
 				<a href="#"><i class="fa fa-angle-down fa-lg"></i></a>
 			</div>
 
 			<div class="area">
 
 				<header>
-					<span class="html">&#35;dechery&nbsp;&nbsp;&#123;</span>
 					<div>
-						<span class="selector">quem:</span> "pierre dechery";<br>
-						<span><span class="selector">o-que:</span> "desenvolvedor web";<br></span>
-						<!-- <span class="selector">faz:</span> css, html, js, php etc; -->
-						<span class="selector">color:</span> blue;
+						<span>pierre = <span class="selector">Developer()</span><br>
+						<span>pierre.skills = <span class="selector">[&nbsp;'PHP',&nbsp;'Javascript',&nbsp;'Python'&nbsp;]</span><br></span>
+						<span>pierre.tools = <span class="selector">[&nbsp;'Laravel',&nbsp;'Flask',&nbsp;'React'&nbsp;]</span><br>
+						<span>pierre.works = <span class="selector">True</span>
 					</div>
-					<span class="html">&#125;</span>
 				</header>
 
 			</div>
@@ -53,116 +49,60 @@
 
 		<section id="main" class="panel">
 
-			<div class="btn hvr-wobble-vertical">
+			<div class="btn">
 				<a href="#"><i class="fa fa-angle-up fa-lg"></i></a>
 			</div>
 
-			<a id="icon" href="#"><i class="fa fa-angle-down"></i></a><!-- mobile -->
-				
-			<nav id="nav-mobile">
-				<ul>
-					<li><a href="#" data-target="bio">bio</a></li>
-					<li><a href="#" data-target="skill">skills</a></li>
-					<li><a href="#" data-target="work">works</a></li>
-					<li><a href="#" data-target="cv">cv</a></li>
-					<li><a href="#" data-target="contato">contato</a></li>
-				</ul>
-			</nav>
+			<a id="icon" href="#"><i class="fa fa-angle-down"></i></a>
 
-			<nav id="nav">
-				<ul>
-					<li><a href="#" data-target="bio">bio</a></li>
-					<li><a href="#" data-target="skill">skills</a></li>
-					<li><a href="#" data-target="work">works</a></li>
-					<li><a href="#" data-target="cv">cv</a></li>
-					<li><a href="#" data-target="contato">contato</a></li>
+			<aside id="nav">
+				
+				<h3>coding&nbsp;&nbsp;<i class="fa fa-code"></i></h3>
+				<ul class="nobull">
+					<li>PHP 7</li>
+					<li>Python 3</li>
+					<li>Javascript/ES6</li>
+					<li>CSS/LESS</li>
 				</ul>
-			</nav>
+
+				<h3>toolkit&nbsp;&nbsp;<i class="fa fa-wrench"></i></h3>
+				<ul class="nobull">
+					<li>Git</li>
+					<li>Docker</li>
+					<li>Laravel</li>
+					<li>Flask</li>
+					<li>Vue.js</li>
+					<li>React</li>
+					<li>nginx/Apache</li>
+					<li>npm</li>
+					<li>Linux</li>
+					<li>&nbsp;</li>
+				</ul>
+
+			</aside>
 			
 			<div class="area">
 					
 				<div id="bio" class="eu">
 					<h4>Olá</h4>
-					<p>Meu nome é Pierre Dechery.<p>
-					<p>Sou um desenvolvedor web full-stack, com experiência em back e front-end.</p>
-					<p>Já que está aqui, porque não <a href="#" data-target="work">conhecer meus trabalhos</a> e <a href="#" data-target="cv">saber um pouco mais sobre mim?</a></p>
-					<p>Fique à vontade também para <a href="#" data-target="contato">entrar em contato.</a></p>
-				</div>
-
-				<div id="skill" class="eu">
-					<h4>Skills</h4>
-					<div class="col-wrap">
-						<div class="col-body">
-							<div class="cell">
-								<h3>coding&nbsp;&nbsp;<i class="fa fa-code"></i></h3>
-								<ul class="nobull">
-									<li>PHP 7</li>
-									<li>Python 3</li>
-									<li>CSS/LESS</li>
-									<li>Javascript/ES6</li>
-								</ul>
-							</div>
-							<div id="tools" class="cell">
-								<h3>toolkit&nbsp;&nbsp;<i class="fa fa-wrench"></i></h3>
-								<ul class="nobull">
-									<li>Git</li>
-									<li>Wordpress</li>
-									<li>Laravel</li>
-									<li>Django</li>
-									<li>nginx/Apache</li>
-									<li>npm</li>
-									<li>Ubuntu 16.04</li>
-									<li>&nbsp;</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div id="contato" class="eu">
-					<h4>entre em contato</h4>
-					<ul class="nobull">
-						<li><i class="fa fa-envelope"></i>&nbsp;&nbsp;<a href="mailto:pierre@decheryweb.com.br">pierre@decheryweb.com.br</a></li>
-						<li><i class="fa fa-mobile-phone"></i>&nbsp;&nbsp;021 99331 6438</a></li>
-						<li><i class="fa fa-skype"></i>&nbsp;&nbsp;decheryweb</li>
-						<li><i class="fa fa-linkedin-square"></i>&nbsp;&nbsp;<a href="https://br.linkedin.com/in/pdechery">br.linkedin.com/in/pdechery</a></li>
-						<li><i class="fa fa-github"></i>&nbsp;&nbsp;<a href="https://github.com/pdechery">github.com/pdechery</a></li>
+					<p>Meu nome é Pierre Dechery. Sou um Desenvolvedor Web.<p>
+					<p>Tenho sólida experiência com desenvolvimento Front e Back-end.</p>
+					<p>Trabalho com PHP, Javascript e Python e já atuei em projetos com os principais frameworks destas linguagens. Tenho experiência em ambientes Linux.</p>
+					<p>Caso queira saber mais visite meu perfil no Linkedin ou envie um email.</p>
+					<ul id="icones" class="nobull">
+						<li>
+							<i class="fa fa-linkedin-square"></i>
+							<a href="https://br.linkedin.com/in/pdechery" target="_blank">
+								br.linkedin.com/in/pdechery
+							</a>
+						</li>
+						<li>
+							<i class="fa fa-envelope"></i>
+							<a href="mailto:pierre.dechery@gmail.com">
+								pierre.dechery@gmail.com
+							</a>
+						</li>
 					</ul>
-				</div>
-
-				<div id="cv" class="eu">
-					<h4>Breve currículo</h4>
-					<ul>
-						<li>Sou formado em Desenho Industrial (habilitação Comunicação Visual) pela PUC-Rio (2001)</li>
-						<li>Trabalhei como developer em algumas empresas, entre elas: <a href="http://dapp.fgv.br/" target="_blank">FGV DAPP</a>, <a href="http://www.tuut.com.br/" target="_blank">TUUT</a>, <a href="http://rioaliancafrancesa.com.br/" target="_blank">Aliança Francesa</a>, <a href="http://softbrazil.com.br/agenciaweb/" target="_blank">Softbrazil</a> e <a href="http://www.telelistas.net/" target="_blank">Telelistas</a></li>
-						<li>Atualmente sou desenvolvedor web na Veus Technology</a></li>
-						<li>Fiz cursos de desenvolvimento web no <a href="http://www.ilearn.com.br/sitenovo/" target="_blank">iLearn</a>, <a href="https://www.alura.com.br/" target="_blank">Alura</a>, <a href="http://www.schoolofnet.com/" target="_blank">School of Net</a> e <a href="https://laracasts.com/" target="_blank">laracasts.com</a>, entre outros</li>
-						<li>Para mais informações acesse meu <a href="https://br.linkedin.com/in/pdechery">perfil no linkedin</a></li>
-					</ul>
-				</div>
-
-				<div id="work" class="eu">
-
-					<h4>Works</h4>
-
-					<p>Trabalhos mais recentes:</p>
-					<ul>
-						<li><a href="http://prixphotoweb.com.br" target="_blank">Prix Photo Web</a></li>
-						<li><a href="http://visit.rio" target="_blank">visit.rio</a></li>
-						<li><a href="http://www.eavparquelage.rj.gov.br/memoria/" target="_blank">Memória Lage</a></li>
-						<li><a href="http://museubispodorosario.com/" target="_blank">Museu Bispo do Rosário</a></li>
-						<li><a href="http://nelsonfelix.com.br" target="_blank">nelsonfelix.com.br</a></li>
-					</ul>
-
-					<p>Trabalhos antigos:</p>
-					<ul>
-						<li><a href="http://www.britishschool.g12.br" target="_blank">British School</a></li>
-						<li><a href="http://www.interessa.org" target="_blank">interessa.org</a></li>
-						<li><a href="https://www.rioaliancafrancesa.com.br/mostrafrancofonia" target="_blank">Mostra de cinema francês</a></li>
-						<li><a href="http://www.decheryweb.com.br/portfolio" target="_blank">Portfolio 2013</a></li>
-					</ul>
-
-					<p id="links">Visite também meus perfis no <a href="https://github.com/pdechery" target="_blank">Github</a> e no <a href="https://br.pinterest.com/pdechery/" target="_blank">Pinterest</a>.</p>
 				</div>
 
 			</div>

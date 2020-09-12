@@ -1,12 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,300|Montserrat:400,700|Open+Sans:300italic,400italic,700italic,400,300,700);
 
-/*
-
-	Animação botão
-
-*/
-
-
 
 /*
 
@@ -16,13 +9,9 @@
 
 
 @orange:#e15f07;
-
 @darkorange: #b45300;
-
 @selector: #c0f0f3;
-
 @amarelo:#ffffcc;
-
 @azulescuro: #173657;
 
 
@@ -94,7 +83,7 @@ a {
 		left: 50%;
 		bottom: 4%;
 		a {
-			.btn(#fff, transparent, @amarelo);
+			.btn(@selector, transparent, @amarelo);
 		}
 	}
 }
@@ -104,29 +93,9 @@ div.area {
 	color:#fff;
 	position: relative;
 	padding: 0;
-	// width: 740px;
 	width: 620px;
 	margin: 0 auto;
 	top: 15%;
-}
-
-/*
-
-	div display table
-
-*/
-
-.col-wrap {
-	display:table;
-	border-collapse:collapse;
-	width: 100%;
-	.col-body {
-		display:table-row;
-		.cell {
-			display:table-cell;
-			width: 50%;
-		}
-	}
 }
 
 /*
@@ -147,9 +116,6 @@ div.area {
 			line-height: 1.5em;
 			color: #fff;
 			text-align: left;
-			& > div {
-				padding-left: 35px; /* estilo indentado */
-			}
 			span.selector {
 				color: @selector;
 			}
@@ -163,21 +129,31 @@ div.area {
 }
 
 #main {
-	nav { /* menu lateral direita */
+	
+	aside {
+		position: absolute;
+		top: 5%;
+		right: 2%;
+		width: 200px;
+		font-size: 1.2em;
+		text-align: left;
+		display: none;
+		h3 {
+			font-family: 'Montserrat';
+			font-weight: 700;
+			text-transform: uppercase;
+			color: @selector;
+			font-size: .7em;
+		}
 		ul {
 			margin: 0;
 			padding: 0;
-			border-left: 1px solid #fff;
 			li {
 				list-style-type: none;
 				margin: 0;
 				padding: 0;
-				font-family: 'Montserrat';
-				font-weight: 700;
-				text-transform: uppercase;
-				font-size: .7em;
 				cursor: pointer;
-				text-align: left;
+				color: #fff;
 				a {
 					margin: 0;
 					padding:0 20px;
@@ -188,27 +164,32 @@ div.area {
 						color: @amarelo;
 					}
 					&:hover {
-						color: @amarelo;
+						color: #fff;
 					}
 				}
 			}
 		}
 	}
-	.eu { /* wrapper */
-		display:none;
+
+	// background-color: @azulescuro;
+	
+	div.area {
+		width: 780px;
 		min-height: 400px;
 		position: relative;
 		font-family: 'Merriweather'; /* texto */
-		font-size: 1.1em;
+		font-size: 1.24em;
 		font-weight: 400;
 		line-height: 1.6em;
 		p:first-child {
 			margin-top: 0;
 		}
 		a {
-			color: @selector;
+			color: #fff;
+			text-decoration: underline;
 		}
 	}
+	
 	ul.nobull { /* lista de skills */
 		margin: 0;
 		padding: 0;
@@ -217,12 +198,31 @@ div.area {
 			padding: 0 0 5px;
 		}
 	}
-	#nav { /* posição do menu lateral */
+
+	ul#icones {
 		display: none;
-		position: absolute;
-		top: 5%;
-		right: 2%;
+		margin: 2em 0 0 0;
+		li {
+			list-style-type: none;
+			display: block;
+			margin: 0 0 .4em;
+			padding: 0;
+			font-size: .8em;
+			color: @selector;
+			i {
+				font-size: 1.4em;
+				margin-right: .6em;
+			}
+			a {
+				color: @selector;
+				text-decoration: none;
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
 	}
+	
 	a#icon { /* botão nav mobile */
 		display: none;
 		position: absolute;
@@ -240,54 +240,6 @@ div.area {
 			background-color: @azulescuro;
 			color: @amarelo;
 		}
-	}
-	#nav-mobile {
-		display: none;
-		position: absolute;
-		width: 100%;
-		top:34px;
-		left:0;
-		z-index: 40;
-		ul {
-			border:0;
-			border-top: 1px solid #fff;
-			li a {
-				text-align: center;
-				display: block;
-				width: auto;
-				border-bottom: 1px solid #fff;
-				background-color: @azulescuro;
-				padding: 5% 0;
-				font-size: 1.2em;
-			}
-		}
-	}
-	#skill {  /* tabela skills */
-		.cell {
-			border: 1px solid #fff;
-			padding-left: 30px;
-		}
-		ul li i {
-			color: @amarelo;
-		}
-		h3 {
-			font-size: .8em;
-			font-family: 'Montserrat';
-			font-weight: 700;
-			text-transform: uppercase;
-		}
-	}
-	#cv {
-		li {
-			margin-bottom: 20px;
-		}
-	}
-}
-
-#main #work {
-	p#links {
-		margin-top: 40px;
-		font-size: .8em;
 	}
 }
 
