@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Teste Layout</title>
+	<style>
+		body, html {
+			margin: 0;
+			background: url("./img/bg_blue.png") no-repeat 50% 50%;
+			height: 100%;
+			background-size: cover;
+			background-attachment: fixed;
+			color: #fff;
+		}
+		* {
+			box-sizing: border-box;
+		}
+		main {
+			height: 100%;
+		}
+		section {
+			display: flex;
+		}
+		#cover {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center; /* secondary axis */
+			height: 100%;
+		}
+		#content {
+			justify-content: center; /* main axis */
+		}
+		.area {
+			padding: 0;
+			width: 620px;
+			border: 1px solid red;
+			font-size: 26px;
+			text-align: left;
+			color: #fff;
+		}
+		#content .area {
+			padding-bottom: 100px;
+		}
+
+		div.btn {
+			width:  300px;
+			border:  1px solid red;
+		}
+		div.btn a {
+			font-size: 2em;
+			display: inline-block;
+			text-decoration: none;
+			padding: 5px;
+			width: 24px;
+			height: 24px;
+			border-radius: 24px;
+			color: #c0f0f3;
+			background-color: transparent;
+		}
+		div.btn a:hover {
+			color: #ffffcc;
+			background-color: transparent;
+		}
+	</style>	
+</head>
+<body>
+	<main>
+		<section id="cover">
+			<div class="area">
+				<header>
+					<div>
+						<span>pierre = <span class="selector">Developer()</span><br>
+						<span>pierre.skills = <span class="selector">[&nbsp;'PHP',&nbsp;'Javascript',&nbsp;'Python'&nbsp;]</span><br></span>
+						<span>pierre.tools = <span class="selector">[&nbsp;'Laravel',&nbsp;'Flask',&nbsp;'React'&nbsp;]</span><br>
+						<span>pierre.works = <span class="selector">True</span>
+					</div>
+				</header>
+			</div>
+			<div class="btn">
+				<a href="#">Heheheh</a>
+			</div>
+		</section>
+		<section id="content">
+			<div class="area">
+				<h1>Legal legal</h1>
+				<p>Lorem ipsum dolor sit amet. Hic consequatur vitae est aliquam vero rem omnis reiciendis est earum culpa qui facere ipsam non magnam quos. Aut ipsum quia et explicabo suscipit et quia laboriosam est amet doloribus qui voluptas enim aut fuga placeat.</p>
+				<p>Id eius consequuntur aut beatae fuga quo possimus facilis ab provident laudantium. Eos deserunt sunt qui distinctio accusantium At assumenda obcaecati aut consequatur quia vel officia sequi in facilis exercitationem! Vel beatae temporibus ut sequi esse ut illo pariatur est nisi velit et placeat doloremque est autem laudantium aut enim nisi!</p>
+				<p>Non aspernatur voluptas aut harum ratione et quia recusandae sit dicta ipsam. Ut nihil nostrum ut consequatur consectetur aut molestiae dolorem ad odit dolore et deleniti beatae. Et harum corrupti et culpa ducimus et assumenda iusto eum aspernatur facilis? Rem quibusdam rerum ut maxime laudantium et adipisci odio hic maiores ipsum ut omnis exercitationem ea sunt voluptas ut aliquam earum.</p>
+				<p>Id eius consequuntur aut beatae fuga quo possimus facilis ab provident laudantium. Eos deserunt sunt qui distinctio accusantium At assumenda obcaecati aut consequatur quia vel officia sequi in facilis exercitationem! Vel beatae temporibus ut sequi esse ut illo pariatur est nisi velit et placeat doloremque est autem laudantium aut enim nisi!</p>
+				<p>Non aspernatur voluptas aut harum ratione et quia recusandae sit dicta ipsam. Ut nihil nostrum ut consequatur consectetur aut molestiae dolorem ad odit dolore et deleniti beatae. Et harum corrupti et culpa ducimus et assumenda iusto eum aspernatur facilis? Rem quibusdam rerum ut maxime laudantium et adipisci odio hic maiores ipsum ut omnis exercitationem ea sunt voluptas ut aliquam earum.</p>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
