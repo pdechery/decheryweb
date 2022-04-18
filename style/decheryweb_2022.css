@@ -1,3 +1,15 @@
+/**
+ * Dechery Web
+ * ---------------
+ * Abril 2022
+ * Pierre Dechery
+ * 
+ */
+/**
+ * 
+ * Google Fonts
+ * 
+ */
 @font-face {
   font-family: 'Merriweather';
   font-style: normal;
@@ -64,27 +76,30 @@
   font-stretch: normal;
   src: url(https://fonts.gstatic.com/s/opensans/v28/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
 }
-/*
-
-	variáveis
-
-*/
-/*
-
-	mixin botão
-
-*/
+/**
+ * 
+ * Cores
+ * 
+ */
+/**
+ * 
+ * Mixins LESS
+ * 
+ */
+/**
+ * 
+ * Geral
+ * 
+ */
 body,
 html {
   margin: 0;
   background: url("../img/bg_blue.png") no-repeat 50% 50%;
   height: 100%;
   background-size: cover;
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   /* evitar que as fontes sejam automaticamente bold no Mac. */
-  font-size: 16px;
-  line-height: 1.5em;
-  text-align: center;
 }
 section,
 div,
@@ -103,28 +118,155 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.panel {
-  background-size: cover;
-  position: relative;
-  z-index: 4;
-  padding: 1px 0;
-  /* evitar margin-collapsing */
+ul {
+  margin: 0;
+  padding: 0;
 }
-.panel h4 {
+ul li {
+  list-style-type: none;
+  padding: 0 0 5px;
+}
+/**
+ * 
+ * Typography
+ * 
+ */
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Montserrat';
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 1.4em;
   margin-top: 0;
   color: #ffffcc;
 }
-.panel div.btn {
-  position: absolute;
-  margin-left: -25px;
-  left: 50%;
-  bottom: 4%;
+body {
+  font-family: 'Merriweather';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  text-align: center;
 }
-.panel div.btn a {
+div#codeblock {
+  font-family: 'Open Sans';
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: #fff;
+  text-align: left;
+}
+div#codeblock span.obj {
+  color: #f7ca76;
+}
+div#codeblock span.method {
+  color: #c0f0f3;
+}
+div#codeblock span.list:before {
+  content: '[ ';
+}
+div#codeblock span.list:after {
+  content: ' ]';
+}
+div#codeblock span.string {
+  color: #ffffcc;
+}
+div#codeblock span.string:before {
+  content: '"';
+}
+div#codeblock span.string:after {
+  content: '"';
+}
+div#codeblock span.bool {
+  color: #a5ff8f;
+}
+#content .area {
+  text-align: left;
+  font-size: 1.24em;
+  line-height: 1.6em;
+}
+#content .area h4 {
+  font-size: 1.4em;
+}
+aside {
+  font-size: 1.2em;
+  text-align: left;
+}
+aside h3 {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f1a283;
+  font-size: 0.7em;
+  margin: 1em 0;
+}
+#lang_switch {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+#lang_switch a {
+  color: #fff;
+}
+/**
+ * 
+ * Estrutura
+ * 
+ * main
+ * |-- section#cover
+ * |---- div.area
+ * |-- section#content
+ * |---- div.area
+ * 
+ */
+main {
+  height: 100%;
+}
+section {
+  display: flex;
+}
+.area {
+  padding: 0;
+  width: 620px;
+  color: #fff;
+}
+#cover {
+  flex-direction: column;
+  /* flex vertical */
+  justify-content: center;
+  align-items: center;
+  /* secondary axis */
+  height: 100%;
+}
+#cover .area {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content {
+  justify-content: center;
+  /* main axis */
+  background-color: #218109;
+  position: relative;
+}
+#content #pt_br {
+  display: none;
+}
+#content .area {
+  padding-top: 4em;
+  padding-bottom: 100px;
+}
+/**
+ * 
+ * Elementos Layout
+ *  
+ */
+div.btn {
+  width: 300px;
+  height: 60px;
+}
+div.btn a {
   font-size: 2em;
   display: inline-block;
   text-decoration: none;
@@ -132,178 +274,52 @@ a:hover {
   width: 24px;
   height: 24px;
   border-radius: 24px;
-  color: #c0f0f3;
+  color: #f7ca76;
   background-color: transparent;
 }
-.panel div.btn a:hover {
+div.btn a:hover {
   color: #ffffcc;
   background-color: transparent;
 }
-.panel div.btn a i {
+div.btn a i {
   line-height: 0.8em;
 }
-div.area {
-  text-align: left;
-  color: #fff;
-  position: relative;
-  padding: 0;
-  width: 620px;
-  margin: 0 auto;
-  top: 15%;
+ul#icones {
+  margin: 3em 0 0 0;
 }
-/*
-
-	sections
-
-*/
-#cover div.area {
-  text-align: center;
-  top: 35%;
-  width: 480px;
-  height: 170px;
-}
-#cover div.area header {
-  /* 'id' dechery css */
-  font-family: 'Open Sans';
-  font-size: 1.5em;
-  line-height: 1.5em;
-  color: #fff;
-  text-align: left;
-}
-#cover div.area header span.selector {
-  color: #c0f0f3;
-}
-#cover div.area header span.html {
-  margin: 0 0 20px;
-  padding: 0;
-  color: #ffffcc;
-}
-#main aside {
-  position: absolute;
-  top: 5%;
-  right: 2%;
-  width: 200px;
-  font-size: 1.2em;
-  text-align: left;
-  display: none;
-}
-#main aside h3 {
-  font-family: 'Montserrat';
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #c0f0f3;
-  font-size: 0.7em;
-}
-#main aside ul {
-  margin: 0;
-  padding: 0;
-}
-#main aside ul li {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  color: #fff;
-}
-#main aside ul li a {
-  margin: 0;
-  padding: 0 20px;
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-}
-#main aside ul li a.ativo {
-  color: #ffffcc;
-}
-#main aside ul li a:hover {
-  color: #fff;
-}
-#main div.area {
-  width: 780px;
-  min-height: 400px;
-  position: relative;
-  font-family: 'Merriweather';
-  /* texto */
-  font-size: 1.24em;
-  font-weight: 400;
-  line-height: 1.6em;
-}
-#main div.area p:first-child {
-  margin-top: 0;
-}
-#main div.area a {
-  color: #fff;
-  text-decoration: underline;
-}
-#main ul.nobull {
-  /* lista de skills */
-  margin: 0;
-  padding: 0;
-}
-#main ul.nobull li {
-  list-style-type: none;
-  padding: 0 0 5px;
-}
-#main ul#icones {
-  display: none;
-  margin: 2em 0 0 0;
-}
-#main ul#icones li {
-  list-style-type: none;
+ul#icones li {
   display: block;
   margin: 0 0 0.4em;
   padding: 0;
   font-size: 0.8em;
-  color: #c0f0f3;
+  color: #fff;
 }
-#main ul#icones li i {
+ul#icones li i {
   font-size: 1.4em;
   margin-right: 0.6em;
-}
-#main ul#icones li a {
   color: #c0f0f3;
+}
+ul#icones li a {
+  color: #ffffcc;
   text-decoration: none;
 }
-#main ul#icones li a:hover {
+ul#icones li a:hover {
   color: #fff;
 }
-#main a#icon {
-  /* botão nav mobile */
-  display: none;
+aside {
   position: absolute;
-  top: 0;
-  right: 4%;
-  width: 34px;
-  height: 34px;
+  top: 2%;
+  right: 2%;
+  width: 200px;
+}
+aside ul li {
+  font-size: 0.8em;
+  cursor: pointer;
   color: #fff;
-  border: 1px solid #fff;
-  border-top: 0;
-  text-align: center;
-  line-height: 2em;
-  z-index: 30;
 }
-#main a#icon:hover {
-  background-color: #173657;
-  color: #ffffcc;
-}
-/*
-
-	clearfix
-
-*/
-.clearfix:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-.clearfix {
-  display: inline;
-}
-* html .clearfix {
-  height: 1%;
-}
-.clearfix {
-  display: block;
+#lang_switch {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  width: 40px;
 }

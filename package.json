@@ -8,7 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "less": "lessc ./style/less/decheryweb.less ./style/decheryweb.css",
-    "less-watch": "less-watch-compiler ./style/less ./style decheryweb.less"
+    "less-watch": "less-watch-compiler ./style/less ./style decheryweb_2022.less"
   },
   "repository": {
     "type": "git",

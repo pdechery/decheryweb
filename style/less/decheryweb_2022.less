@@ -1,0 +1,301 @@
+/**
+ * Dechery Web
+ * ---------------
+ * Abril 2022
+ * Pierre Dechery
+ * 
+ */ 
+
+/**
+ * 
+ * Google Fonts
+ * 
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300|Montserrat:400,700|Open+Sans:300italic,400italic,700italic,400,300,700);
+
+
+/**
+ * 
+ * Cores
+ * 
+ */
+
+
+@vermelho: #eb7575;
+@vermelho_bright: #f1a283;
+@amarelo_escuro: #f7ca76;
+@blue_bright: #c0f0f3;
+@amarelo: #ffffcc;
+@azulescuro: #173657;
+@green_bright: #a5ff8f;
+@green: #218109;
+
+
+/**
+ * 
+ * Mixins LESS
+ * 
+ */
+
+.btn(@color, @bgcolor, @hover) {
+	font-size: 2em;
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px;
+	width: 24px;
+	height: 24px;
+	border-radius: 24px;
+	color:@color;
+	background-color:@bgcolor;
+	&:hover {
+		color: @hover;
+		background-color: transparent;
+	}
+	i {
+		line-height:.8em;
+	}
+}
+
+/**
+ * 
+ * Geral
+ * 
+ */
+
+body, html { 
+	margin: 0;
+	background: url("../img/bg_blue.png") no-repeat 50% 50%;
+	height: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+	-webkit-font-smoothing: antialiased; /* evitar que as fontes sejam automaticamente bold no Mac. */
+}
+
+section, div, ul, li, p {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style-type: none;
+		padding: 0 0 5px;
+	}
+}
+
+/**
+ * 
+ * Typography
+ * 
+ */
+
+h1, h2, h3, h4 {
+	font-family: 'Montserrat';
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 0;
+	color: @amarelo;
+}
+
+body {
+	font-family: 'Merriweather';
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5em;
+	text-align: center;
+}
+
+div#codeblock {
+	font-family: 'Open Sans';
+	font-size: 1.5em;
+	line-height: 1.5em;
+	color: #fff;
+	text-align: left;
+	span.obj {
+		color: @amarelo_escuro;
+	}
+	span.method {
+		color: @blue_bright;
+	}
+	span.equal {
+		//color: @orange;
+	}
+	span.list {
+		&:before {
+			content: '[ ';
+		}
+		&:after {
+			content: ' ]';
+		}
+	}
+	span.string {
+		color: @amarelo;
+		&:before {
+			content: '"';
+		}
+		&:after {
+			content: '"';
+		}
+	}
+	span.bool {
+		color: @green_bright;
+	}
+}
+
+#content .area {
+	h4 {
+		font-size: 1.4em;
+	}
+	text-align: left;
+	font-size: 1.24em;
+    line-height: 1.6em;
+}
+
+aside {
+	font-size: 1.2em;
+	text-align: left;
+	h3 {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		text-transform: uppercase;
+		color: @vermelho_bright;
+		font-size: .7em;
+		margin: 1em 0;
+	}
+}
+
+#lang_switch {
+	font-family: 'Montserrat';
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1em;
+	//color: @vermelho_bright;
+	//margin: 1em 0;
+	//border: 1px solid red;
+	a {
+		color: #fff;
+	}
+}
+
+/**
+ * 
+ * Estrutura
+ * 
+ * main
+ * |-- section#cover
+ * |---- div.area
+ * |-- section#content
+ * |---- div.area
+ * 
+ */
+
+main {
+	height: 100%;
+}
+
+section {
+	display: flex;
+}
+
+.area {
+	padding: 0;
+	width: 620px;
+	color: #fff;
+}
+
+#cover {
+	flex-direction: column; /* flex vertical */
+	justify-content: center;
+	align-items: center; /* secondary axis */
+	height: 100%;
+	.area {
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+#content {
+	justify-content: center; /* main axis */
+	background-color: @green;
+	position: relative;
+	#pt_br {
+		display: none;
+	}
+	.area {
+		padding-top: 4em;
+		padding-bottom: 100px;
+	}
+}
+
+/**
+ * 
+ * Elementos Layout
+ *  
+ */
+
+div.btn {
+	width: 300px;
+	height: 60px;
+	a {
+		.btn(@amarelo_escuro, transparent, @amarelo);
+	}
+}
+
+ul#icones {
+	// display: none;
+	margin: 3em 0 0 0;
+	li {
+		display: block;
+		margin: 0 0 .4em;
+		padding: 0;
+		font-size: .8em;
+		color: #fff;
+		i {
+			font-size: 1.4em;
+			margin-right: .6em;
+			color: @blue_bright;
+		}
+		a {
+			color: @amarelo;
+			text-decoration: none;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+
+aside {
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	width: 200px;
+	//display: none;
+	ul {
+		li {
+			font-size: .8em;
+			cursor: pointer;
+			color: #fff;
+		}
+	}
+}
+
+#lang_switch {
+	position: fixed;
+	bottom: 2%;
+	right: 2%;
+	width: 40px;
+}

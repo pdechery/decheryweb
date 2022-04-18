@@ -1,119 +1,141 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-	<title>Dechery Web</title>
-	<link rel="stylesheet" href="style/decheryweb.css?v=4">
-	<link rel="stylesheet" href="style/responsive.css?v=3">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pierre Dechery, desenvolvedor web senior</title>
+	<link rel="stylesheet" href="style/decheryweb_2022.css?v=4">
 	<link rel="stylesheet" href="style/font-awesome.min.css">
+	<script type="text/javascript" src="js/index.js" defer></script>
 </head>
 <body>
-	
-	<script type="text/javascript">
-
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-37397646-1']);
-		_gaq.push(['_trackPageview']);
-
-		(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-
-	</script>
-
-	<div id="wrap">
-		
-		<section id="cover" class="panel">
-
+	<main>
+		<section id="cover">
+			<div class="area">
+				<div id="codeblock">
+					pierre <span class="equal">=</span> <span class="obj">Developer()</span><br>
+					
+					pierre.<span class="method">skills</span> <span class="equal">=</span>
+					<span class="list">
+						<span class="string">PHP</span>,
+						<span class="string">Javascript</span>,
+						<span class="string">Python</span>
+					</span><br>
+					
+					pierre.<span class="method">tools</span> <span class="equal">=</span> <span class="list">
+						<span class="string">Laravel</span>,
+						<span class="string">Flask</span>
+						<span class="string">React</span>
+					</span><br>
+					
+					pierre.<span class="method">works</span> <span class="equal">=</span> <span class="bool">True</span>
+				</div>
+			</div>
 			<div class="btn">
 				<a href="#"><i class="fa fa-angle-down fa-lg"></i></a>
 			</div>
-
-			<div class="area">
-
-				<header>
-					<div>
-						<span>pierre = <span class="selector">Developer()</span><br>
-						<span>pierre.skills = <span class="selector">[&nbsp;'PHP',&nbsp;'Javascript',&nbsp;'Python'&nbsp;]</span><br></span>
-						<span>pierre.tools = <span class="selector">[&nbsp;'Laravel',&nbsp;'Flask',&nbsp;'React'&nbsp;]</span><br>
-						<span>pierre.works = <span class="selector">True</span>
-					</div>
-				</header>
-
-			</div>
-
 		</section>
-
-		<section id="main" class="panel">
-
-			<div class="btn">
-				<a href="#"><i class="fa fa-angle-up fa-lg"></i></a>
-			</div>
-
-			<a id="icon" href="#"><i class="fa fa-angle-down"></i></a>
-
-			<aside id="nav">
-				
+		<section id="content">
+			<!-- <div id=lang_switch>
+				<a href="#">EN</a>
+			</div> -->
+			<aside>
 				<h3>coding&nbsp;&nbsp;<i class="fa fa-code"></i></h3>
-				<ul class="nobull">
-					<li>PHP 7</li>
+				<ul>
 					<li>Python 3</li>
 					<li>Javascript/ES6</li>
 					<li>CSS/LESS</li>
+					<li>Bash</li>
 				</ul>
-
 				<h3>toolkit&nbsp;&nbsp;<i class="fa fa-wrench"></i></h3>
-				<ul class="nobull">
+				<ul>
 					<li>Git</li>
 					<li>Docker</li>
-					<li>Laravel</li>
+					<li>Django</li>
 					<li>Flask</li>
 					<li>Vue.js</li>
 					<li>React</li>
-					<li>nginx/Apache</li>
 					<li>npm</li>
+				</ul>
+				<h3>server side&nbsp;&nbsp;<i class="fa fa-server"></i></h3>
+				<ul>
 					<li>Linux</li>
-					<li>&nbsp;</li>
+					<li>nginx</li>
+					<li>Apache</li>
+					<li>Postgres</li>
+					<li>MySQL</li>
 				</ul>
 
 			</aside>
-			
-			<div class="area">
-					
-				<div id="bio" class="eu">
-					<h4>Olá</h4>
-					<p>Meu nome é Pierre Dechery. Sou um Desenvolvedor Web.<p>
-					<p>Tenho sólida experiência com desenvolvimento Front e Back-end.</p>
-					<p>Trabalho com PHP, Javascript e Python e já atuei em projetos com os principais frameworks destas linguagens. Tenho experiência em ambientes Linux.</p>
-					<p>Caso queira saber mais visite meu perfil no Linkedin ou envie um email.</p>
-					<ul id="icones" class="nobull">
-						<li>
-							<i class="fa fa-linkedin-square"></i>
-							<a href="https://br.linkedin.com/in/pdechery" target="_blank">
-								br.linkedin.com/in/pdechery
-							</a>
-						</li>
-						<li>
-							<i class="fa fa-envelope"></i>
-							<a href="mailto:pierre.dechery@gmail.com">
-								pierre.dechery@gmail.com
-							</a>
-						</li>
-					</ul>
-				</div>
-
+			<div id="pt_br" class="area">
+				<h4>Olá</h4>
+				<p>Meu nome é Pierre Dechery.</p>
+				<p>Trabalho com desenvolvimento web desde o início da vida profissional. Me formei em Design pela PUC-Rio em 2000 mas a tecnologia surgiu na minha vida ainda no primeiro estágio.</p>
+				<p>De lá pra cá passei por empresas como TeleListas, Aliança Francesa, FGV e Editora Globo, acumulando experiência e conhecimento ao longo do caminho.</p>
+				<p>Atualmente meu stack tecnológico é composto por Python, JS e Docker. Sou entusisasta do sistema Linux, desde meu primeiro contato com o Ubuntu, em 2016, e estou em aprendizado contínuo neste universo através de leituras e cursos desde então.</p>
+				<p>Tenho utilizado Python como linguagem principal para desenvolvimento há cerca de três anos, na maior parte das vezes com o framework Django. Anteriormente utilizava PHP, com o Laravel.</p>
+				<p>Em Front-end gosto de utilizar JS "vanilla" e meus frameworks favoritos são o Vue.js e o React.</p>
+				<p>Atuo também na Infra, utilizando meus conhecimentos em Linux para implementar e realizar troubleshooting em toda estrutura necessária a um website de grande porte. Isto inclui administração de serviços como banco de dados e servidores web, entre outros.</p>
+				<p>Tenho fluência em inglês e francês, o que ajuda bastante na leitura de documentações e em fóruns em geral.</p>
+				<ul id="icones" class="nobull" style="display: block;">
+					<li>
+						<i class="fa fa-linkedin-square"></i>
+						<a href="https://br.linkedin.com/in/pdechery" target="_blank">
+							br.linkedin.com/in/pdechery
+						</a>
+					</li>
+					<li>
+						<i class="fa fa-github"></i>
+						<a href="https://github.com/pdechery" target="_blank">
+							github.com/pdechery
+						</a>
+					</li>
+					<li>
+						<i class="fa fa-google"></i>
+						<a href="mailto:pierre.dechery@gmail.com">
+							pierre.dechery@gmail.com
+						</a>
+					</li>
+					<li>
+						<i class="fa fa-music"></i>
+						<a href="https://www.mundolunar.art.br/">
+							mundolunar.art.br
+						</a>
+					</li>
+				</ul>
 			</div>
-
+			<div id="en" class="area">
+				<h4>Hi</h4>
+				<p>My name's Pierre Dechery.</p>
+				<p>I work as a web developer since the beggining of my professional journey. I was gratuated in Graphic Design in 2000 but technology came to my life since my first internship.</p>
+				<p>Since then, I've worked in several companies, like TeleListas, Aliança Francesa, FGV and Editora Globo, aquiring experience and skills along the way.</p>
+				<p>Currently, my tech stack is composed by Python, JS e Docker. I'm a Linux/GNU enthusiast since my first contact with it this SO back in 2016. I'm still constantly reading about it and taking courses.</p>
+				<p>I'd been using Python mas my main language for about the last three years, most of the time with the Django Framework. Before, I used PHP, with Laravel.</p>
+				<p>Front-end wise, I love coding with vanilla JS and I'm comfortable using both Vue.js and React.</p>
+				<p>Since I'm skilled in Linux environments I can (and do) work in the Infrastructure side, taking care of services like databases and webservers.</p>
+				<p>I have proficiency in English and French, which helps a lot in reading documentations as well as participating in forums.</p>
+				<ul id="icones" class="nobull" style="display: block;">
+					<li>
+						<i class="fa fa-linkedin-square"></i>
+						<a href="https://br.linkedin.com/in/pdechery" target="_blank">
+							br.linkedin.com/in/pdechery
+						</a>
+					</li>
+					<li>
+						<i class="fa fa-github"></i>
+						<a href="https://github.com/pdechery" target="_blank">
+							github.com/pdechery
+						</a>
+					</li>
+					<li>
+						<i class="fa fa-google"></i>
+						<a href="mailto:pierre.dechery@gmail.com">
+							pierre.dechery@gmail.com
+						</a>
+					</li>
+				</ul>
+			</div>
 		</section>
-
-	</div>
-
-	<script src="js/jquery.js"></script>
-	<script src="js/index.js?version=3"></script>
-	<script src="js/jquery.fullpage.min.js"></script>
-
+	</main>
 </body>
 </html>
