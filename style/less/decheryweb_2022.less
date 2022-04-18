@@ -57,6 +57,16 @@
 	}
 }
 
+.hidden {
+	opacity: 0;
+    pointer-events: none;
+}
+
+.show {
+	opacity: 1;
+    transition: opacity .5s linear;
+}
+
 /**
  * 
  * Geral
@@ -177,9 +187,9 @@ aside {
 
 #lang_switch {
 	font-family: 'Montserrat';
-	font-weight: 700;
+	font-weight: 600;
 	text-transform: uppercase;
-	font-size: 1em;
+	font-size: .8em;
 	//color: @vermelho_bright;
 	//margin: 1em 0;
 	//border: 1px solid red;
@@ -231,9 +241,6 @@ section {
 	justify-content: center; /* main axis */
 	background-color: @green;
 	position: relative;
-	#pt_br {
-		display: none;
-	}
 	.area {
 		padding-top: 4em;
 		padding-bottom: 100px;
@@ -255,7 +262,6 @@ div.btn {
 }
 
 ul#icones {
-	// display: none;
 	margin: 3em 0 0 0;
 	li {
 		display: block;
@@ -283,7 +289,6 @@ aside {
 	top: 2%;
 	right: 2%;
 	width: 200px;
-	//display: none;
 	ul {
 		li {
 			font-size: .8em;
