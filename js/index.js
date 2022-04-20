@@ -3,6 +3,7 @@ const contentArea = document.querySelector('#content');
 const en = contentArea.querySelector('#en');
 const pt_br = contentArea.querySelector('#pt');
 const lang_switch = document.querySelector('#lang_switch');
+const lang_switch_mobile = document.querySelector('#lang_switch_mobile');
 const aside = document.querySelector('aside');
 const icones = document.querySelector('ul#icones');
 
@@ -28,7 +29,9 @@ btn.addEventListener('click', (ev) => {
 
 });
 
-lang_switch.addEventListener('click', (ev) => {
+function switchLang(ev) {
+
+	console.log(ev)
 
 	ev.preventDefault();
 
@@ -49,4 +52,7 @@ lang_switch.addEventListener('click', (ev) => {
 	ev.srcElement.innerHTML = 'PT';
 	return true;
 
-})
+}
+
+lang_switch.addEventListener('click', switchLang);
+lang_switch_mobile.addEventListener('click', switchLang);

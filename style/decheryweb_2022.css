@@ -206,14 +206,20 @@ aside h3 {
   font-size: 0.7em;
   margin: 1em 0;
 }
-#lang_switch {
+#lang_switch,
+#lang_switch_mobile {
   font-family: 'Montserrat';
   font-weight: 600;
   text-transform: uppercase;
   font-size: 1em;
 }
-#lang_switch a {
+#lang_switch a,
+#lang_switch_mobile a {
   color: #fff;
+}
+#lang_switch_mobile {
+  margin-top: 2em;
+  font-size: 0.8em;
 }
 /**
  * 
@@ -325,4 +331,31 @@ aside ul li {
   bottom: 2%;
   right: 2%;
   width: 40px;
+}
+/**
+ * 
+ * Responsive
+ * 
+ */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  div#codeblock {
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+  section#content {
+    flex-direction: column;
+    align-items: center;
+  }
+  section#content .area {
+    width: 80%;
+  }
+  aside {
+    display: none;
+  }
+  #lang_switch {
+    display: none;
+  }
+  #lang_switch_mobile {
+    display: block;
+  }
 }
