@@ -87,12 +87,10 @@
  * 
  */
 .hidden {
-  opacity: 0;
-  pointer-events: none;
+  display: none;
 }
 .show {
-  opacity: 1;
-  transition: opacity 0.5s linear;
+  display: block;
 }
 /**
  * 
