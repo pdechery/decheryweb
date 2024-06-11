@@ -1,0 +1,7 @@
+services:
+  node-decheryweb:
+    image: node:latest
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: npm run less
