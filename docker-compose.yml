@@ -4,4 +4,4 @@ services:
     working_dir: /app
     volumes:
       - .:/app
-    command: npm run less
+    entrypoint: npm run less
